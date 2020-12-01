@@ -401,62 +401,93 @@ class Gh_Hook_Commerce_Admin {
             'fields' => array(
 
 
-
                 array(
-                    'id'          => 'gh_change_plural_name_of_product_menu',
-                    'type'        => 'text',
-                    'title'       => 'Change plural name of Products menu',
-                    'after'       => 'Change the name of the Product menu in dashboard. For example, Books.',
-                    'attributes'    => array(
-                       'placeholder' => 'Books',
-                       //'data-test'   => 'test',
-
-                    ),
-                ),
-
-                array(
-                    'id'    => 'image_1',
-                    'type'  => 'image',
-                    'title' => 'Image',
-                ),
-
-
-                array(
-                    'id'      => 'switcher_1',
-                    'type'    => 'switcher',
-                    'title'   => 'Switcher',
-                    'label'   => 'You want to do this?',
-                    'default' => 'yes',
-                ),
-
-
-                array(
-                    'id'      => 'hidden_1',
-                    'type'    => 'hidden',
-                    'default' => 'hidden',
-                ),
-
-              
-                array(
-                    'id'    => 'checkbox_2',
+                    'id'    => 'gh_rename_checkout_page_label',
                     'type'  => 'checkbox',
-                    'title' => 'Checkbox Fancy',
+                    'title' => 'Rename Checkout Page Labels',
                     'label' => 'Do you want to do this?',
                     'style'    => 'fancy',
                     'after' => '<i>If you check this and the other checkbox, a text field will appier.</i>'
                 ),
 
+                /*
+                *https://www.businessbloomer.com/woocommerce-rename-state-label-checkout/
+                */
                 array(
-                    'id'     => 'text_2',
-                    'type'   => 'text',
-                    'title'  => 'Text Test Dependency',
-                    //'dependency' => array( 'checkbox_1|checkbox_2', '==|==', 'true|true' ),
-                    'dependency' => array( 'checkbox_2', '==', 'true' ),
-                    'attributes'    => array(
-                        'placeholder' => 'Dependency test',
+                    'id'      => 'gh_rename_checkout_page_label_mapping',
+                    'type'    => 'group',
+                    'dependency' => array( 'gh_rename_checkout_page_label', '==', 'true' ),
+                    'title'   => esc_html__( 'Checkout label mapping', 'gh-hook-commerce' ),
+                    'options' => array(
+                        'repeater'          => true,
+                        'accordion'         => true,
+                        'button_title'      => esc_html__( 'Add new', 'gh-hook-commerce' ),
+                        'group_title'       => esc_html__( 'Checkout Label', 'gh-hook-commerce' ),
+                        'limit'             => 50,
+                        'sortable'          => true,
                     ),
+                    'fields'  => array(
+
+                        array(
+                            'id'          => 'gh_rename_checkout_page_label_mapping_existing_field',
+                            'type'           => 'select',
+                            'title'       => 'Existing Field Name',
+                            'options'        => array(
+                                'none'          => 'None',
+                                'solid'         => 'Solid',
+                                'dashed'        => 'Dashed',
+                                'dotted'        => 'Dotted',
+                                'double'        => 'Double',
+                                'inset'         => 'Inset',
+                                'outset'        => 'Outset',
+                                'groove'        => 'Groove',
+                                'ridge'         => 'ridge',
+                            ),
+                            'default_option' => 'None',
+                            'default'     => 'none',
+                            'class'       => 'repeater-50 chosen width-150',
+                            'description' => 'This will be the name of the input field of existing checkout fields',
+                        ),
+
+                        array(
+                            'id'          => 'gh_rename_checkout_page_label_mapping_label_tobe_replaced',
+                            'type'        => 'text',
+                            'title'       => 'Label to be replaced',
+                            'class'       => 'repeater-50',
+                            'description' => 'This will be the label of the input field to be replaced',
+                        ),
+
+                    ),
+
                 ),
 
+                /*
+                *https://www.businessbloomer.com/woocommerce-add-shipping-phone-checkout/
+                */
+                array(
+                    'id'    => 'gh_checkout_shipping_phone',
+                    'type'  => 'checkbox',
+                    'title' => 'Shipping Phone Field',
+                    'label' => 'Display Shipping Phone Field',
+                    'style' => 'fancy',
+                    'after' => '<i>Display Shipping Phone Field on checkout page.</i>'
+                ),
+
+
+                /*
+                *https://www.businessbloomer.com/woocommerce-rename-place-order-button-checkout/
+                */
+                 array(
+                    'id'          => 'gh_rename_checkout_place_order_button',
+                    'type'        => 'text',
+                    'title'       => 'Rename "Place Order" Button',
+                    'class'       => 'repeater-50',
+                    'description' => 'This will be the label of the input field to be replaced',
+                ),
+
+                 /*
+                 *https://www.businessbloomer.com/woocommerce-add-content-under-place-order-button-checkout/
+                 */
             )
         );
 
