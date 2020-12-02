@@ -80,3 +80,17 @@ function run_gh_hook_commerce() {
 
 }
 run_gh_hook_commerce();
+
+/*
+add_filter( 'woocommerce_checkout_fields' , 'custom_rename_wc_checkout_fields' );
+
+// Change placeholder and label text
+function custom_rename_wc_checkout_fields( $fields ) {
+  echo "<pre>";
+  print_r($fields);
+  echo "</pre>";
+
+  $fields['billing']['billing_first_name']['placeholder'] = 'Wonka';
+  $fields['billing']['billing_first_name']['label'] = 'Your Awesome First Name';
+  return $fields;
+}*/

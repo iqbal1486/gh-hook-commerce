@@ -100,6 +100,37 @@ class Gh_Hook_Commerce_Admin {
 
 	}
 
+
+    public function get_all_pages(){
+        $send_all_pages_array = array();
+        $pages = get_pages(); 
+
+        foreach ( $pages as $page ) {
+            $send_all_pages_array[get_page_link( $page->ID )] = $page->post_title;
+        }
+
+        return $send_all_pages_array;
+    }
+
+    public function get_checkout_fields(){
+        
+        WC()->session = new WC_Session_Handler();
+        WC()->session->init();
+
+        $WC_Checkout            = new WC_Checkout();
+        $get_checkout_fields    = $WC_Checkout->get_checkout_fields();
+        
+        $send_checkout_fields_array = array();
+        foreach ($get_checkout_fields as $main_key => $internal_fields) {
+            foreach ($internal_fields as $key => $value) {
+                $send_checkout_fields_array[$key] = ucfirst($main_key) .' '.  $value['label'];
+            }
+        }
+
+        return $send_checkout_fields_array;
+    }
+
+
 	public function create_menu() {
 
         $hook_commerce_submenu = array(
@@ -112,6 +143,7 @@ class Gh_Hook_Commerce_Admin {
             'plugin_basename'   =>  plugin_basename( plugin_dir_path( __DIR__ ) . $this->plugin_name . '.php' ),
         );
 
+       
         /*
         * Woo Global Mods
         */
@@ -121,61 +153,37 @@ class Gh_Hook_Commerce_Admin {
             'icon'   => 'dashicons-admin-generic',
             'fields' => array(
 
-
-
                 array(
-                    'id'          => 'gh_change_plural_name_of_product_menu',
-                    'type'        => 'text',
-                    'title'       => 'Change plural name of Products menu',
-                    'after'       => 'Change the name of the Product menu in dashboard. For example, Books.',
-                    'attributes'    => array(
-                       'placeholder' => 'Books',
-                       //'data-test'   => 'test',
-
-                    ),
+                    'id'          => 'gh_default_product_image',
+                    'type'        => 'image',
+                    'title'       => 'Default Product Image',
+                    'after'       => 'Change the placeholder image that is shown if no image is added to the product.',
                 ),
 
                 array(
-                    'id'    => 'image_1',
-                    'type'  => 'image',
-                    'title' => 'Image',
-                ),
-
-
-                array(
-                    'id'      => 'switcher_1',
-                    'type'    => 'switcher',
-                    'title'   => 'Switcher',
-                    'label'   => 'You want to do this?',
-                    'default' => 'yes',
-                ),
-
-
-                array(
-                    'id'      => 'hidden_1',
-                    'type'    => 'hidden',
-                    'default' => 'hidden',
-                ),
-
-              
-                array(
-                    'id'    => 'checkbox_2',
-                    'type'  => 'checkbox',
-                    'title' => 'Checkbox Fancy',
+                    'id'    => 'gh_remove_breadcrumb',
+                    'type'  => 'switcher',
+                    'title' => 'Remove Breadcrumbs',
                     'label' => 'Do you want to do this?',
-                    'style'    => 'fancy',
-                    'after' => '<i>If you check this and the other checkbox, a text field will appier.</i>'
+                    'default' => 'no',
                 ),
 
                 array(
-                    'id'     => 'text_2',
-                    'type'   => 'text',
-                    'title'  => 'Text Test Dependency',
-                    //'dependency' => array( 'checkbox_1|checkbox_2', '==|==', 'true|true' ),
-                    'dependency' => array( 'checkbox_2', '==', 'true' ),
-                    'attributes'    => array(
-                        'placeholder' => 'Dependency test',
-                    ),
+                    'id'      => 'gh_change_breadcrumb_separator',
+                    'type'    => 'text',
+                    'title'   => 'Change Breadcrumb Separator',
+                    'label'   => 'You want to do this?',
+                    'dependency' => array( 'gh_remove_breadcrumb', '==', 'false' ),
+
+                ),
+
+            
+                array(
+                    'id'    => 'gh_remove_sale_badge',
+                    'type'  => 'switcher',
+                    'title' => 'Remove Sale Badge',
+                    'label' => 'Do you want to do this?',
+                    'default' => 'no',
                 ),
 
             )
@@ -199,13 +207,8 @@ class Gh_Hook_Commerce_Admin {
                     'title'       => 'Change WooCommerce name on dashboard',
                     //'before'      => 'Text Before',
                     'after'       => 'Rename WooCommerce menu name as per your wish',
-                    //'class'       => 'text-class',
-                    //'description' => 'Description',
-                    //'default'     => 'Default Text',
                     'attributes'    => array(
                        'placeholder' => 'My Store',
-                       //'data-test'   => 'test',
-
                     ),
                     'help'        => 'Help text',
                 ),
@@ -217,8 +220,6 @@ class Gh_Hook_Commerce_Admin {
                     'after'       => 'Change the dash icon of WooCommcerce menu item, you can see a full list <a href="">here</a> copy the code and paste it, for example the shopping cart would be f174.',
                     'attributes'    => array(
                        'placeholder' => 'f174',
-                       //'data-test'   => 'test',
-
                     ),
                 ),
 
@@ -230,8 +231,6 @@ class Gh_Hook_Commerce_Admin {
                     'after'       => 'Change the name of the Product menu in dashboard. For example, Book.',
                     'attributes'    => array(
                        'placeholder' => 'Book',
-                       //'data-test'   => 'test',
-
                     ),
                 ),
 
@@ -243,64 +242,7 @@ class Gh_Hook_Commerce_Admin {
                     'after'       => 'Change the name of the Product menu in dashboard. For example, Books.',
                     'attributes'    => array(
                        'placeholder' => 'Books',
-                       //'data-test'   => 'test',
-
                     ),
-                ),
-
-                array(
-                    'id'    => 'image_1',
-                    'type'  => 'image',
-                    'title' => 'Image',
-                ),
-
-
-                array(
-                    'id'      => 'switcher_1',
-                    'type'    => 'switcher',
-                    'title'   => 'Switcher',
-                    'label'   => 'You want to do this?',
-                    'default' => 'yes',
-                ),
-
-
-                array(
-                    'id'      => 'hidden_1',
-                    'type'    => 'hidden',
-                    'default' => 'hidden',
-                ),
-
-              
-                array(
-                    'id'    => 'checkbox_2',
-                    'type'  => 'checkbox',
-                    'title' => 'Checkbox Fancy',
-                    'label' => 'Do you want to do this?',
-                    'style'    => 'fancy',
-                    'after' => '<i>If you check this and the other checkbox, a text field will appier.</i>'
-                ),
-
-                array(
-                    'id'     => 'text_2',
-                    'type'   => 'text',
-                    'title'  => 'Text Test Dependency',
-                    //'dependency' => array( 'checkbox_1|checkbox_2', '==|==', 'true|true' ),
-                    'dependency' => array( 'checkbox_2', '==', 'true' ),
-                    'attributes'    => array(
-                        'placeholder' => 'Dependency test',
-                    ),
-                ),
-
-                array(
-                  'id'      => 'radio_2',
-                  'type'    => 'radio',
-                  'title'   => 'Radio Fancy',
-                  'options' => array(
-                    'yes'   => 'Yes, Please.',
-                    'no'    => 'No, Thank you.',
-                  ),
-                  'default' => 'no',
-                  'style'    => 'fancy',
                 ),
 
             )
@@ -317,79 +259,55 @@ class Gh_Hook_Commerce_Admin {
             'icon'   => 'dashicons-admin-generic',
             'fields' => array(
 
-
-
+                /*
+                *https://www.businessbloomer.com/woocommerce-how-to-alter-cart-items-count/
+                */
                 array(
-                    'id'          => 'gh_change_plural_name_of_product_menu',
-                    'type'        => 'text',
-                    'title'       => 'Change plural name of Products menu',
-                    'after'       => 'Change the name of the Product menu in dashboard. For example, Books.',
-                    'attributes'    => array(
-                       'placeholder' => 'Books',
-                       //'data-test'   => 'test',
-
-                    ),
-                ),
-
-                array(
-                    'id'    => 'image_1',
-                    'type'  => 'image',
-                    'title' => 'Image',
-                ),
-
-
-                array(
-                    'id'      => 'switcher_1',
-                    'type'    => 'switcher',
-                    'title'   => 'Switcher',
-                    'label'   => 'You want to do this?',
-                    'default' => 'yes',
-                ),
-
-
-                array(
-                    'id'      => 'hidden_1',
-                    'type'    => 'hidden',
-                    'default' => 'hidden',
-                ),
-
-              
-                array(
-                    'id'    => 'checkbox_2',
+                    'id'    => 'gh_show_distinct_cart_item_count',
                     'type'  => 'checkbox',
-                    'title' => 'Checkbox Fancy',
+                    'title' => 'Show Distint Cart Item Count',
                     'label' => 'Do you want to do this?',
                     'style'    => 'fancy',
-                    'after' => '<i>If you check this and the other checkbox, a text field will appier.</i>'
+                    'after' => '<i><a href="https://www.businessbloomer.com/woocommerce-how-to-alter-cart-items-count/">Clcik here</a></i>'
                 ),
 
+
+                /*
+                *https://www.businessbloomer.com/woocommerce-split-cart-table-az-headings/
+                */
                 array(
-                    'id'     => 'text_2',
-                    'type'   => 'text',
-                    'title'  => 'Text Test Dependency',
-                    //'dependency' => array( 'checkbox_1|checkbox_2', '==|==', 'true|true' ),
-                    'dependency' => array( 'checkbox_2', '==', 'true' ),
-                    'attributes'    => array(
-                        'placeholder' => 'Dependency test',
+                    'id'     => 'gh_split_cart_table',
+                    'type'  => 'checkbox',
+                    'title' => 'Split Cart Table',
+                    'label' => 'Split Cart Table with A-Z headings',
+                    'style'    => 'fancy',
+                    'after' => '<i>TEXT HTML</i>'
+                ),
+
+                /*
+                *https://www.businessbloomer.com/woocommerce-remove-cart-product-link-cart-page/
+                */
+
+                
+                /*
+                *https://www.businessbloomer.com/woocommerce-edit-continue-shopping-link-redirect/
+                */
+                array(
+                  'id'      => 'gh_edit_continue_shopping_link',
+                  'type'    => 'select',
+                  'title'   => 'Change Continue Shopping Link',
+                  'query'   => array(
+                        'type'          => 'callback',
+                        'function'      => array( $this, 'get_all_pages' ),
+                        'args'          => array() // WordPress query args
                     ),
-                ),
-
-                array(
-                  'id'      => 'radio_2',
-                  'type'    => 'radio',
-                  'title'   => 'Radio Fancy',
-                  'options' => array(
-                    'yes'   => 'Yes, Please.',
-                    'no'    => 'No, Thank you.',
-                  ),
-                  'default' => 'no',
-                  'style'    => 'fancy',
+                  'default_option' => 'Select page to set as "Continue Shopping"',
+                    'class'       => 'repeater-50 chosen width-150',
+                    'description' => 'This will be the name of the input field of existing checkout fields',
                 ),
 
             )
         );
-
-
 
         /*
         * Woo Checkout Mods
@@ -397,6 +315,129 @@ class Gh_Hook_Commerce_Admin {
         $fields[] = array(
             'name'   => 'gh-checkout-mods',
             'title'  => 'Woo Checkout Mods',
+            'icon'   => 'dashicons-admin-generic',
+            'fields' => array(
+
+                /*
+                *https://www.businessbloomer.com/woocommerce-add-shipping-phone-checkout/
+                */
+                array(
+                    'id'    => 'gh_checkout_shipping_phone',
+                    'type'  => 'checkbox',
+                    'title' => 'Shipping Phone Field',
+                    'label' => 'Display Shipping Phone Field',
+                    'style' => 'fancy',
+                    'after' => '<i>Display Shipping Phone Field on checkout page.</i>'
+                ),
+
+
+                /*
+                *https://www.businessbloomer.com/woocommerce-rename-place-order-button-checkout/
+                */
+                array(
+                    'id'          => 'gh_rename_checkout_place_order_button',
+                    'type'        => 'text',
+                    'title'       => 'Rename "Place Order" Button',
+                    'description' => 'This will be the label of the input field to be replaced',
+                ),
+
+                /*
+                *https://www.businessbloomer.com/woocommerce-add-content-under-place-order-button-checkout/
+                */
+                array(
+                    'id'    => 'gh_add_content_under_place_order_button',
+                    'type'  => 'checkbox',
+                    'title' => 'Add Content Under Place Order Button',
+                    'label' => 'Do you want to do this?',
+                    'style' => 'fancy',
+                    'after' => '<i>If you check this and the other checkbox, a text field will appier.</i>'
+                ),
+
+                array(
+                    'id'      => 'gh_add_content_under_place_order_button_text',
+                    'type'    => 'ace_editor',
+                    'title'   => 'Content below place order button',
+                    'dependency' => array( 'gh_add_content_under_place_order_button', '==', 'true' ),
+                    'options' => array(
+                        'theme'                     => 'ace/theme/chrome',
+                        'mode'                      => 'ace/mode/javascript',
+                        'showGutter'                => false,
+                        'showPrintMargin'           => false,
+                        'enableBasicAutocompletion' => false,
+                        'enableSnippets'            => false,
+                        'enableLiveAutocompletion'  => false,
+                    ),
+                    'attributes'    => array(
+                        'style'        => 'height: 300px; max-width: 700px;',
+                    ),
+                ),
+
+
+                /*
+                *https://www.businessbloomer.com/woocommerce-display-order-delivery-date-checkout/
+                */
+                
+                array(
+                    'id'    => 'gh_show_order_delivery_date',
+                    'type'  => 'checkbox',
+                    'title' => 'Order Delivery Date',
+                    'label' => 'Display Order Delivery Date at Checkout',
+                    'style' => 'fancy',
+                    'after' => '<i>If you check this and the other checkbox, a text field will appier.</i>'
+                ),
+
+                
+                array(
+                    'id'      => 'gh_order_delivery_date_group',
+                    'type'    => 'group',
+                    'dependency' => array( 'gh_show_order_delivery_date', '==', 'true' ),
+                    'title'   => esc_html__( 'Order Delivery Date Setting', 'gh-hook-commerce' ),
+                    'options' => array(
+                        'group_title'       => esc_html__( 'Delivery Date Setting', 'gh-hook-commerce' ),
+                        'closed'            => false,
+                    ),
+                    'fields'  => array(
+
+                        array(
+                            'id'          => 'gh_order_delivery_date_label',
+                            'type'        => 'text',
+                            'title'       => 'Order Delivery Date Label',
+                            'description' => 'Default label will be "Select Delivery Date"',
+                        ),
+
+                        array(
+                            'id'          => 'gh_order_delivery_date_placeholder',
+                            'type'        => 'text',
+                            'title'       => 'Rename "Place Order" Button',
+                            'description' => 'Default label will be "Click to open calendar"',
+                        ),
+
+                    ),
+                )
+
+
+                /*
+                *https://www.businessbloomer.com/woocommerce-deny-checkout-user-pending-orders/
+                */
+                /*
+                *https://www.businessbloomer.com/woocommerce-holidaypauseclosed-mode/
+                */
+                /*
+                *https://www.businessbloomer.com/woocommerce-add-house-number-field-checkout/
+                */
+                /*
+                *https://www.businessbloomer.com/woocommerce-add-custom-checkout-field-php/
+                */
+            )
+        );
+
+
+         /*
+        * Woo Checkout Rename Label Mods
+        */
+        $fields[] = array(
+            'name'   => 'gh-checkout-rename-label-mods',
+            'title'  => 'Woo Checkout Rename Labels',
             'icon'   => 'dashicons-admin-generic',
             'fields' => array(
 
@@ -429,28 +470,20 @@ class Gh_Hook_Commerce_Admin {
                     'fields'  => array(
 
                         array(
-                            'id'          => 'gh_rename_checkout_page_label_mapping_existing_field',
+                            'id'          => 'gh_existing_field',
                             'type'           => 'select',
                             'title'       => 'Existing Field Name',
-                            'options'        => array(
-                                'none'          => 'None',
-                                'solid'         => 'Solid',
-                                'dashed'        => 'Dashed',
-                                'dotted'        => 'Dotted',
-                                'double'        => 'Double',
-                                'inset'         => 'Inset',
-                                'outset'        => 'Outset',
-                                'groove'        => 'Groove',
-                                'ridge'         => 'ridge',
+                            'query'          => array(
+                                'type'          => 'callback',
+                                'function'      => array( $this, 'get_checkout_fields' ),
+                                'args'          => array() // WordPress query args
                             ),
-                            'default_option' => 'None',
-                            'default'     => 'none',
                             'class'       => 'repeater-50 chosen width-150',
                             'description' => 'This will be the name of the input field of existing checkout fields',
                         ),
 
                         array(
-                            'id'          => 'gh_rename_checkout_page_label_mapping_label_tobe_replaced',
+                            'id'          => 'gh_label_tobe_replaced',
                             'type'        => 'text',
                             'title'       => 'Label to be replaced',
                             'class'       => 'repeater-50',
@@ -461,33 +494,6 @@ class Gh_Hook_Commerce_Admin {
 
                 ),
 
-                /*
-                *https://www.businessbloomer.com/woocommerce-add-shipping-phone-checkout/
-                */
-                array(
-                    'id'    => 'gh_checkout_shipping_phone',
-                    'type'  => 'checkbox',
-                    'title' => 'Shipping Phone Field',
-                    'label' => 'Display Shipping Phone Field',
-                    'style' => 'fancy',
-                    'after' => '<i>Display Shipping Phone Field on checkout page.</i>'
-                ),
-
-
-                /*
-                *https://www.businessbloomer.com/woocommerce-rename-place-order-button-checkout/
-                */
-                 array(
-                    'id'          => 'gh_rename_checkout_place_order_button',
-                    'type'        => 'text',
-                    'title'       => 'Rename "Place Order" Button',
-                    'class'       => 'repeater-50',
-                    'description' => 'This will be the label of the input field to be replaced',
-                ),
-
-                 /*
-                 *https://www.businessbloomer.com/woocommerce-add-content-under-place-order-button-checkout/
-                 */
             )
         );
 

@@ -177,6 +177,12 @@ class Gh_Hook_Commerce {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
+		$options = get_option( $this->plugin_name );
+		/*echo '<pre>';
+		print_r( $options );
+		echo '</pre>';*/
+
+
 	}
 
 	/**
