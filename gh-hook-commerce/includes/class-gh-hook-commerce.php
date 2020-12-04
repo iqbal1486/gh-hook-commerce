@@ -73,7 +73,8 @@ class Gh_Hook_Commerce {
 			$this->version = '1.0.0';
 		}
 		$this->plugin_name = 'gh-hook-commerce';
-
+		$this->options = get_option( $this->plugin_name );
+		$this->options_en = $this->options['en'];
 		$this->load_dependencies();
 		$this->set_locale();
 		$this->define_admin_hooks();
@@ -154,13 +155,19 @@ class Gh_Hook_Commerce {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Gh_Hook_Commerce_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Gh_Hook_Commerce_Admin( $this->get_plugin_name(), $this->get_version(), $this->get_options_en() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-
+		
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'create_menu', 0 );
 
+		$this->loader->add_action( 'admin_menu', $plugin_admin, 'rename_woocoomerce_admin_menu_callback', 999 );
+		$this->loader->add_action( 'admin_head', $plugin_admin, 'replace_woocommerce_dashicons_callback' );
+		
+		if($this->options_en['gh_change_name_of_product_menu'] == "yes"){
+			$this->loader->add_filter( 'woocommerce_register_post_type_product', $plugin_admin, 'cpt_label_woo_callback' );
+		}
 	}
 
 	/**
@@ -172,16 +179,14 @@ class Gh_Hook_Commerce {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Gh_Hook_Commerce_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Gh_Hook_Commerce_Public( $this->get_plugin_name(), $this->get_version(), $this->get_options_en() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
-		$options = get_option( $this->plugin_name );
-		/*echo '<pre>';
-		print_r( $options );
-		echo '</pre>';*/
-
+		if($this->options_en['gh_rename_checkout_page_label'] == "yes"){
+			$this->loader->add_filter( 'woocommerce_checkout_fields' , $plugin_public, 'gh_rename_checkout_page_label_callback', 9999 );
+		}
 
 	}
 
@@ -225,4 +230,25 @@ class Gh_Hook_Commerce {
 		return $this->version;
 	}
 
+
+	public function get_options_en() {
+		return $this->options_en;
+	}
+
+
+	public function recursive_array_search_php( $needle, $haystack ){
+		foreach( $haystack as $key => $value ) {
+			$current_key = $key;
+			if(
+				$needle === $value
+				OR (
+					 	is_array( $value )
+						&& recursive_array_search_php( $needle, $value ) !== false
+				 	)
+			){
+				return $current_key;
+			}
+		}
+		return false;
+ 	}
 }

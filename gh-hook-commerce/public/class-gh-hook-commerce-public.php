@@ -47,10 +47,11 @@ class Gh_Hook_Commerce_Public {
 	 * @param      string    $plugin_name       The name of the plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $plugin_name, $version ) {
+	public function __construct( $plugin_name, $version, $options_en ) {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
+		$this->options_en = $options_en;
 
 	}
 
@@ -98,6 +99,36 @@ class Gh_Hook_Commerce_Public {
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/gh-hook-commerce-public.js', array( 'jquery' ), $this->version, false );
 
+	}
+
+
+	public function gh_rename_checkout_page_label_callback( $fields ) {
+		
+		
+		$checkout_page_label_mapping = $this->options_en['gh_rename_checkout_page_label_mapping'];
+		if($checkout_page_label_mapping){
+			foreach ($checkout_page_label_mapping as $key => $value) {
+				if( $fields['billing'][$value['gh_existing_field']] ){
+					$fields['billing'][$value['gh_existing_field']]['label'] = $value['gh_label_tobe_replaced'];
+				}
+
+				if( $fields['shipping'][$value['gh_existing_field']] ){
+					$fields['shipping'][$value['gh_existing_field']]['label'] = $value['gh_label_tobe_replaced'];
+				}
+
+				if( $fields['account'][$value['gh_existing_field']] ){
+					$fields['account'][$value['gh_existing_field']]['label'] = $value['gh_label_tobe_replaced'];
+				}
+
+				if( $fields['order'][$value['gh_existing_field']] ){
+					$fields['order'][$value['gh_existing_field']]['label'] = $value['gh_label_tobe_replaced'];
+				}
+				
+			}	
+		}
+		
+	    
+	    return $fields;
 	}
 
 }

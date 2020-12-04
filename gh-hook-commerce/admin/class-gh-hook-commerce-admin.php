@@ -47,10 +47,11 @@ class Gh_Hook_Commerce_Admin {
 	 * @param      string    $plugin_name       The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $plugin_name, $version ) {
+	public function __construct( $plugin_name, $version, $options_en ) {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
+        $this->options_en = $options_en;
 
 	}
 
@@ -100,6 +101,77 @@ class Gh_Hook_Commerce_Admin {
 
 	}
 
+    public function cpt_label_woo_callback( $args ){
+
+        $singular_name_of_product   = $this->options_en['gh_change_singular_name_of_product_menu'];
+        $plural_name_of_product     = $this->options_en['gh_change_plural_name_of_product_menu'];
+
+        $labels = array(
+          'name'               => __( $singular_name_of_product, 'gh-hook-commerce' ),
+          'singular_name'      => __( $plural_name_of_product, 'gh-hook-commerce' ),
+          'menu_name'          => _x( $singular_name_of_product, 'Admin menu name', 'gh-hook-commerce' ),
+          'add_new'            => __( 'Add '.$plural_name_of_product.'', 'gh-hook-commerce' ),
+          'add_new_item'       => __( 'Add New '.$plural_name_of_product.'', 'gh-hook-commerce' ),
+          'edit'               => __( 'Edit  '.$plural_name_of_product.'', 'gh-hook-commerce' ),
+          'edit_item'          => __( 'Edit  '.$plural_name_of_product.'', 'gh-hook-commerce' ),
+          'new_item'           => __( 'New  '.$plural_name_of_product.'', 'gh-hook-commerce' ),
+          'view'               => __( 'View  '.$plural_name_of_product.'', 'gh-hook-commerce' ),
+          'view_item'          => __( 'View  '.$plural_name_of_product.'', 'gh-hook-commerce' ),
+          'search_items'       => __( 'Search '.$singular_name_of_product.'', 'gh-hook-commerce' ),
+          'not_found'          => __( 'No  '.$singular_name_of_product.' found', 'gh-hook-commerce' ),
+          'not_found_in_trash' => __( 'No '.$singular_name_of_product.' found in trash', 'gh-hook-commerce' ),
+          'parent'             => __( 'Parent  '.$plural_name_of_product.'', 'gh-hook-commerce' )
+        );
+
+        $args['labels'] = $labels;
+        return $args;
+    }
+
+
+    public function rename_woocoomerce_admin_menu_callback(){
+        
+        $change_woocommerce_name_on_dashboard = $this->options_en['gh_change_woocommerce_name_on_dashboard'];
+
+        if ($change_woocommerce_name_on_dashboard != ""){
+            global $menu;
+            $woo = $this->recursive_array_search_php( 'WooCommerce', $menu );
+            if( !$woo )
+                return;
+            
+            $menu[$woo][0] = $change_woocommerce_name_on_dashboard;
+        }
+    }
+
+
+    public function replace_woocommerce_dashicons_callback(){
+        
+        $gh_change_woocommerce_menu_icon = $this->options_en['gh_change_woocommerce_menu_icon'];
+
+        if ($gh_change_woocommerce_menu_icon != ""){
+        $content =  sprintf('<style type="text/css">#adminmenu #toplevel_page_woocommerce .menu-icon-generic div.wp-menu-image::before {content:"\%s" !important;font-family: dashicons !important;}</style>',$gh_change_woocommerce_menu_icon );
+
+        echo $content;
+        }
+    }
+
+
+    public function get_checkout_field_types(){
+        $send_checkout_field_types_array = array(
+                                               'billing'    => "Billing",
+                                               'shipping'   => "Shipping", 
+                                               'after_order_notes'   => "After Order Notes", 
+                                            );
+        return $send_checkout_field_types_array;
+    }
+
+    public function get_checkout_field_input_types(){
+        $send_checkout_field_input_types_array = array(
+                                                       'text'       => "Text",
+                                                       'textarea'   => "Textarea", 
+                                                       'checkbox'   => "Checkbox", 
+                                                    );
+        return $send_checkout_field_input_types_array;
+    }
 
     public function get_all_pages(){
         $send_all_pages_array = array();
@@ -112,6 +184,7 @@ class Gh_Hook_Commerce_Admin {
         return $send_all_pages_array;
     }
 
+
     public function get_checkout_fields(){
         
         WC()->session = new WC_Session_Handler();
@@ -123,7 +196,7 @@ class Gh_Hook_Commerce_Admin {
         $send_checkout_fields_array = array();
         foreach ($get_checkout_fields as $main_key => $internal_fields) {
             foreach ($internal_fields as $key => $value) {
-                $send_checkout_fields_array[$key] = ucfirst($main_key) .' '.  $value['label'];
+                $send_checkout_fields_array[$key] = $value['label']. " ( ".ucfirst($main_key)." ) ";
             }
         }
 
@@ -150,7 +223,7 @@ class Gh_Hook_Commerce_Admin {
         $fields[] = array(
             'name'   => 'gh-global-mods',
             'title'  => 'Woo Global Mods',
-            'icon'   => 'dashicons-admin-generic',
+            'icon'   => 'dashicons-universal-access',
             'fields' => array(
 
                 array(
@@ -197,7 +270,7 @@ class Gh_Hook_Commerce_Admin {
         $fields[] = array(
             'name'   => 'gh-admin-dashboard-mods',
             'title'  => 'Woo Admin Mods',
-            'icon'   => 'dashicons-admin-generic',
+            'icon'   => 'dashicons-superhero',
             'fields' => array(
 
 
@@ -217,12 +290,20 @@ class Gh_Hook_Commerce_Admin {
                     'id'          => 'gh_change_woocommerce_menu_icon',
                     'type'        => 'text',
                     'title'       => 'Change WooCommerce menu icon',
-                    'after'       => 'Change the dash icon of WooCommcerce menu item, you can see a full list <a href="">here</a> copy the code and paste it, for example the shopping cart would be f174.',
+                    'after'       => 'Change the dash icon of WooCommcerce menu item, you can see a full list <a href="https://developer.wordpress.org/resource/dashicons/#cart">here</a> copy the code and paste it, for example the shopping cart would be f174.',
                     'attributes'    => array(
                        'placeholder' => 'f174',
                     ),
                 ),
 
+                array(
+                    'id'    => 'gh_change_name_of_product_menu',
+                    'type'  => 'checkbox',
+                    'title' => 'Would you like to change the name of product`s singular and plural name?',
+                    'label' => 'Do you want to do this?',
+                    'style' => 'fancy',
+                    'after' => '<i>If you check this and the other checkbox, a text field will appier.</i>'
+                ),
 
                 array(
                     'id'          => 'gh_change_singular_name_of_product_menu',
@@ -256,7 +337,7 @@ class Gh_Hook_Commerce_Admin {
         $fields[] = array(
             'name'   => 'gh-cart-mods',
             'title'  => 'Woo Cart Mods',
-            'icon'   => 'dashicons-admin-generic',
+            'icon'   => 'dashicons-cart',
             'fields' => array(
 
                 /*
@@ -315,7 +396,7 @@ class Gh_Hook_Commerce_Admin {
         $fields[] = array(
             'name'   => 'gh-checkout-mods',
             'title'  => 'Woo Checkout Mods',
-            'icon'   => 'dashicons-admin-generic',
+            'icon'   => 'dashicons-yes-alt',
             'fields' => array(
 
                 /*
@@ -432,13 +513,13 @@ class Gh_Hook_Commerce_Admin {
         );
 
 
-         /*
+        /*
         * Woo Checkout Rename Label Mods
         */
         $fields[] = array(
             'name'   => 'gh-checkout-rename-label-mods',
             'title'  => 'Woo Checkout Rename Labels',
-            'icon'   => 'dashicons-admin-generic',
+            'icon'   => 'dashicons-editor-textcolor',
             'fields' => array(
 
 
@@ -497,8 +578,168 @@ class Gh_Hook_Commerce_Admin {
             )
         );
 
+        /*
+        * Woo Checkout Fields Mods
+        */
+        $fields[] = array(
+            'name'   => 'gh-checkout-fields-mods',
+            'title'  => 'Woo Checkout Fields',
+            'icon'   => 'dashicons-editor-textcolor',
+            'fields' => array(
+
+
+                array(
+                    'id'    => 'gh_add_custom_checkout_field',
+                    'type'  => 'checkbox',
+                    'title' => 'Would you like to add custom checkout field?',
+                    'label' => 'Do you want to do this?',
+                    'style'    => 'fancy',
+                    'after' => '<i>If you check this and the other checkbox, a text field will appier.</i>'
+                ),
+
+                /*
+                *URL
+                */
+                array(
+                    'id'      => 'gh_add_custom_checkout_field_mapping',
+                    'type'    => 'group',
+                    'dependency' => array( 'gh_add_custom_checkout_field', '==', 'true' ),
+                    'title'   => esc_html__( 'Checkout field mapping', 'gh-hook-commerce' ),
+                    'options' => array(
+                        'repeater'          => true,
+                        'accordion'         => true,
+                        'button_title'      => esc_html__( 'Add new', 'gh-hook-commerce' ),
+                        'group_title'       => esc_html__( 'Checkout Field', 'gh-hook-commerce' ),
+                        'limit'             => 50,
+                        'sortable'          => true,
+                    ),
+                    'fields'  => array(
+
+                        array(
+                            'id'          => 'gh_checkout_field_type',
+                            'type'           => 'select',
+                            'title'       => 'Type of field',
+                            'query'          => array(
+                                'type'          => 'callback',
+                                'function'      => array( $this, 'get_checkout_field_input_types' ),
+                                'args'          => array() // WordPress query args
+                            ),
+                            'class'       => 'repeater-50 chosen width-150',
+                        ),
+
+
+                        array(
+                            'id'          => 'gh_checkout_field_add_to',
+                            'type'           => 'select',
+                            'title'       => 'Where to add the field',
+                            'query'          => array(
+                                'type'          => 'callback',
+                                'function'      => array( $this, 'get_checkout_field_types' ),
+                                'args'          => array() // WordPress query args
+                            ),
+                            'class'       => 'repeater-50 chosen width-150',
+                        ),
+
+                        
+
+
+                        array(
+                            'id'          => 'gh_checkout_field_unique_id',
+                            'type'        => 'text',
+                            'title'       => 'Checkout field Unique Id',
+                            'class'       => 'repeater-50',
+                            'description' => 'This will be the label of the input field to be replaced',
+                        ),
+
+                        array(
+                            'id'          => 'gh_checkout_field_error_message',
+                            'type'        => 'text',
+                            'title'       => 'Checkout field Error message for validation',
+                            'class'       => 'repeater-50',
+                            'description' => 'This will be the label of the input field to be replaced',
+                        ),
+
+                        array(
+                            'id'          => 'gh_checkout_field_field_width',
+                            'type'        => 'text',
+                            'title'       => 'Checkout field Width',
+                            'class'       => 'repeater-50',
+                            'description' => 'Put here default classes of the woocommerce, comma separated classes',
+                        ),
+
+                        array(
+                            'id'          => 'gh_checkout_field_label',
+                            'type'        => 'text',
+                            'title'       => 'Checkout field label',
+                            'class'       => 'repeater-50',
+                            'description' => 'This will be the label of the input field to be replaced',
+                        ),
+
+                        array(
+                            'id'          => 'gh_checkout_field_placeholder',
+                            'type'        => 'text',
+                            'title'       => 'Checkout field placeholder',
+                            'class'       => 'repeater-50',
+                            'description' => 'This will be the label of the input field to be replaced',
+                        ),
+
+                        array(
+                            'id'          => 'gh_checkout_field_class',
+                            'type'        => 'text',
+                            'title'       => 'Classes for checkout field',
+                            'class'       => 'repeater-50',
+                            'description' => 'This will be the label of the input field to be replaced',
+                        ),
+
+                        array(
+                            'id'          => 'gh_checkout_field_required',
+                            'type'        => 'checkbox',
+                            'title'       => 'Is checkout field is required?',
+                            'class'       => 'repeater-50',
+                            'description' => 'This will be the label of the input field to be replaced',
+                        ),
+
+                        array(
+                            'id'          => 'gh_checkout_field_show_on_view_order',
+                            'type'        => 'checkbox',
+                            'title'       => 'Display Field on View Order page?',
+                            'class'       => 'repeater-50',
+                            'description' => 'This will be the label of the input field to be replaced',
+                        ),
+
+                        array(
+                            'id'          => 'gh_checkout_field_add_to_email',
+                            'type'        => 'checkbox',
+                            'title'       => 'Add the custom field to email?',
+                            'class'       => 'repeater-50',
+                            'description' => 'This will be the label of the input field to be replaced',
+                        ),
+
+                    ),
+
+                ),
+
+            )
+        );
+
         $options_panel = new Exopite_Options_Framework( $hook_commerce_submenu, $fields );
 
+    }
+
+    public function recursive_array_search_php( $needle, $haystack ){
+        foreach( $haystack as $key => $value ) {
+            $current_key = $key;
+            if(
+                $needle === $value
+                OR (
+                        is_array( $value )
+                        && recursive_array_search_php( $needle, $value ) !== false
+                    )
+            ){
+                return $current_key;
+            }
+        }
+        return false;
     }
 
 }
