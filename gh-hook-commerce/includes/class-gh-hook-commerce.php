@@ -188,6 +188,18 @@ class Gh_Hook_Commerce {
 			$this->loader->add_filter( 'woocommerce_checkout_fields' , $plugin_public, 'gh_rename_checkout_page_label_callback', 9999 );
 		}
 
+		if($this->options_en['gh_rename_checkout_page_label'] == "yes"){
+			
+			$this->loader->add_filter( 'woocommerce_checkout_fields' , $plugin_public, 'gh_custom_checkout_fields_callback', 9998 );
+
+			$this->loader->add_action( 'woocommerce_after_order_notes', $plugin_public, 'gh_custom_checkout_fields_on_order_notes_callback' );
+
+			$this->loader->add_action( 'woocommerce_checkout_process', $plugin_public, 'gh_custom_checkout_fields_process_callback' );
+			
+			$this->loader->add_action( 'woocommerce_checkout_update_order_meta', $plugin_public, 'gh_custom_checkout_fields_update_order_meta_callback' );
+		
+		}	
+
 	}
 
 	/**

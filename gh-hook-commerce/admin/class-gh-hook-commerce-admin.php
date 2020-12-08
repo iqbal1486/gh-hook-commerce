@@ -660,14 +660,6 @@ class Gh_Hook_Commerce_Admin {
                         ),
 
                         array(
-                            'id'          => 'gh_checkout_field_field_width',
-                            'type'        => 'text',
-                            'title'       => 'Checkout field Width',
-                            'class'       => 'repeater-50',
-                            'description' => 'Put here default classes of the woocommerce, comma separated classes',
-                        ),
-
-                        array(
                             'id'          => 'gh_checkout_field_label',
                             'type'        => 'text',
                             'title'       => 'Checkout field label',
@@ -688,7 +680,7 @@ class Gh_Hook_Commerce_Admin {
                             'type'        => 'text',
                             'title'       => 'Classes for checkout field',
                             'class'       => 'repeater-50',
-                            'description' => 'This will be the label of the input field to be replaced',
+                            'description' => 'Put here default classes of the woocommerce, comma separated classes',
                         ),
 
                         array(

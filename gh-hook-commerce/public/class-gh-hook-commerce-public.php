@@ -131,4 +131,121 @@ class Gh_Hook_Commerce_Public {
 	    return $fields;
 	}
 
+
+	public function gh_custom_checkout_fields_callback( $fields ){
+		
+		$custom_checkout_field_mapping = $this->options_en['gh_add_custom_checkout_field_mapping'];
+
+		if( $custom_checkout_field_mapping ){
+
+			/*
+				echo "<pre>";
+				print_r( $fields );
+				echo "</pre>";
+
+				echo "<pre>";
+				print_r( $custom_checkout_field_mapping );
+				echo "</pre>";
+			*/
+
+			foreach ($custom_checkout_field_mapping as $key => $value) {
+				$gh_type 				=   $value['gh_checkout_field_type'];
+	            $gh_add_to 				=   $value['gh_checkout_field_add_to'];
+	            $gh_unique_id 			=   $value['gh_checkout_field_unique_id'];
+	            $gh_label 				=   $value['gh_checkout_field_label'];
+	            $gh_placeholder 		=   $value['gh_checkout_field_placeholder'];
+	            $gh_class 				=   explode(" ", $value['gh_checkout_field_class']);
+	            $gh_required 			=   ( $value['gh_checkout_field_required'] == 'yes' ) ? true : false;
+
+	            /*
+		            $gh_error_message 		=   $value['gh_checkout_field_error_message'];
+		            $gh_show_on_view_order 	=   $value['gh_checkout_field_show_on_view_order'];
+		            $gh_add_to_email 		=   $value['gh_checkout_field_add_to_email'];
+				*/
+
+	            if ($gh_add_to == "shipping" || $gh_add_to == "billing"){
+
+					$fields[$gh_add_to][$gh_unique_id] = array(
+						'label'     	=> __($gh_label, 'woocommerce'),
+						'type'      	=> $gh_type,
+						'placeholder'   => _x($gh_placeholder, 'placeholder', 'woocommerce'),
+						'required'   	=> $gh_required,
+						'class'     	=> $gh_class,
+						'clear'     	=> true
+					);
+				}
+			}
+			
+
+		}
+
+		return $fields;
+	}
+
+
+	public function gh_custom_checkout_fields_on_order_notes_callback($checkout){
+
+		$custom_checkout_field_mapping = $this->options_en['gh_add_custom_checkout_field_mapping'];
+
+		if( $custom_checkout_field_mapping ){
+			foreach ($custom_checkout_field_mapping as $key => $value) {
+				$gh_type 				=   $value['gh_checkout_field_type'];
+	            $gh_add_to 				=   $value['gh_checkout_field_add_to'];
+	            $gh_unique_id 			=   $value['gh_checkout_field_unique_id'];
+	            $gh_label 				=   $value['gh_checkout_field_label'];
+	            $gh_placeholder 		=   $value['gh_checkout_field_placeholder'];
+	            $gh_class 				=   explode(" ", $value['gh_checkout_field_class']);
+	            $gh_required 			=   ( $value['gh_checkout_field_required'] == 'yes' ) ? true : false;
+
+	            if ($gh_type == "after_order_notes"){
+
+	            	echo '<div>';
+						woocommerce_form_field( 
+								$id, array(
+										'label'     	=> __($gh_label, 'woocommerce'),
+										'type'      	=> $gh_type,
+										'placeholder'   => _x($gh_placeholder, 'placeholder', 'woocommerce'),
+										'required'   	=> $gh_required,
+										'class'     	=> $gh_class,
+										'clear'     	=> true
+										), $checkout->get_value( $id )
+						);
+
+					echo '</div>';	
+	            }
+			}	
+		}	
+	}
+
+
+	public function gh_custom_checkout_fields_process_callback(){
+
+    	$custom_checkout_field_mapping = $this->options_en['gh_add_custom_checkout_field_mapping'];
+
+		if( $custom_checkout_field_mapping ){
+			foreach ($custom_checkout_field_mapping as $key => $value) {
+		       	$gh_unique_id 			=   $value['gh_checkout_field_unique_id'];
+	     		$gh_error_message 		=   $value['gh_checkout_field_error_message'];
+	     		$gh_required 			=   ( $value['gh_checkout_field_required'] == 'yes' ) ? true : false;
+
+	            if ( ! $_POST[$gh_unique_id] && $gh_required )
+        			wc_add_notice( __( $gh_error_message ), 'error' );
+			}	
+		}
+	}
+
+
+	public function gh_custom_checkout_fields_update_order_meta_callback( $order_id ){
+
+    	$custom_checkout_field_mapping = $this->options_en['gh_add_custom_checkout_field_mapping'];
+
+		if( $custom_checkout_field_mapping ){
+			foreach ($custom_checkout_field_mapping as $key => $value) {
+		       	$gh_unique_id 			=   $value['gh_checkout_field_unique_id'];
+	     		
+	     		if ( ! empty( $_POST[$gh_unique_id] ) )
+        			update_post_meta( $order_id, $gh_unique_id, sanitize_text_field( $_POST[$gh_unique_id] ) );
+			}	
+		}
+	}
 }
