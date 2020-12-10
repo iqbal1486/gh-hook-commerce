@@ -168,6 +168,14 @@ class Gh_Hook_Commerce {
 		if($this->options_en['gh_change_name_of_product_menu'] == "yes"){
 			$this->loader->add_filter( 'woocommerce_register_post_type_product', $plugin_admin, 'cpt_label_woo_callback' );
 		}
+
+		if($this->options_en['gh_add_custom_checkout_field'] == "yes"){
+			
+			$this->loader->add_action( 'woocommerce_admin_order_data_after_shipping_address', $plugin_admin, 'gh_custom_checkout_fields_display_after_shipping_address_callback', 10, 1 );
+
+			$this->loader->add_action( 'woocommerce_admin_order_data_after_billing_address', $plugin_admin, 'gh_custom_checkout_fields_display_after_billing_address_callback', 10, 1 );
+
+		}
 	}
 
 	/**
@@ -184,11 +192,11 @@ class Gh_Hook_Commerce {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
-		if($this->options_en['gh_rename_checkout_page_label'] == "yes"){
+		if( $this->options_en['gh_rename_checkout_page_label'] == "yes" ){
 			$this->loader->add_filter( 'woocommerce_checkout_fields' , $plugin_public, 'gh_rename_checkout_page_label_callback', 9999 );
 		}
 
-		if($this->options_en['gh_rename_checkout_page_label'] == "yes"){
+		if( $this->options_en['gh_add_custom_checkout_field'] == "yes" ){
 			
 			$this->loader->add_filter( 'woocommerce_checkout_fields' , $plugin_public, 'gh_custom_checkout_fields_callback', 9998 );
 
@@ -197,9 +205,34 @@ class Gh_Hook_Commerce {
 			$this->loader->add_action( 'woocommerce_checkout_process', $plugin_public, 'gh_custom_checkout_fields_process_callback' );
 			
 			$this->loader->add_action( 'woocommerce_checkout_update_order_meta', $plugin_public, 'gh_custom_checkout_fields_update_order_meta_callback' );
-		
-		}	
 
+		}
+
+		if( $this->options_en['gh_rename_checkout_place_order_button'] ){
+			$this->loader->add_filter( 'woocommerce_order_button_text', $plugin_public, 'gh_rename_checkout_place_order_button_callback', 9999 );	
+		}
+
+		if( $this->options_en['gh_add_content_under_place_order_button'] == "yes" ){
+			$this->loader->add_action( 'woocommerce_review_order_after_submit' , $plugin_public, 'gh_add_content_under_place_order_button_callback', 9999 );
+		}
+
+
+		if( $this->options_en['gh_show_distinct_cart_item_count'] == "yes" ){
+			$this->loader->add_filter( 'woocommerce_cart_contents_count', $plugin_public, 'gh_show_distinct_cart_item_count_callback', 9999, 1 );	
+		}
+
+
+		if( $this->options_en['gh_split_cart_table'] == "yes" ){
+			$this->loader->add_action( 'wp_footer' , $plugin_public, 'gh_split_cart_table_callback', 9999 );
+		}
+
+		if( $this->options_en['gh_edit_continue_shopping_link'] ){
+			$this->loader->add_action( 'woocommerce_continue_shopping_redirect' , $plugin_public, 'gh_edit_continue_shopping_link_callback', 9999 );
+		}
+
+		
+
+	
 	}
 
 	/**

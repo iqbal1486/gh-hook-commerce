@@ -1,0 +1,133 @@
+
+
+--11/16/2020 06:02:56 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-16 10:02:54</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>107</ErrorCode><ErrorText>Order (2) already exists in Transak</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 06:02:57 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-16 10:02:54</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 06:03:27 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-16 10:03:24</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 06:04:42 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-16 10:04:40</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 06:05:48 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-16 10:05:46</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 06:08:56 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-16 10:08:55</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 06:09:18 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-16 10:09:15</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 06:11:23 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-16 10:11:20</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 06:13:24 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-16 10:13:22</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 06:18:17 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-16 10:18:15</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 06:18:54 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-16 10:18:52</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (7,706.30) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 06:20:01 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-16 10:19:58</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><TransakOrderID>465</TransakOrderID><Status>2</Status></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 06:38:41 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-16 10:38:38</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>3</OrderID><TransakOrderID>466</TransakOrderID><Status>2</Status></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 07:28:18 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-16 11:28:16</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>4</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (55.00) does not match Transak's price (3,400.00) for item DMG0001</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (40.00) does not match Transak's price (3,400.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 07:30:13 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-16 11:30:11</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>4</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (55.00) does not match Transak's price (3,400.00) for item DMG0001</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (40.00) does not match Transak's price (3,400.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 07:33:26 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-16 11:33:23</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>4</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (55.00) does not match Transak's price (3,400.00) for item DMG0001</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (40.00) does not match Transak's price (3,400.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 07:35:02 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-16 11:34:59</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>4</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (55.00) does not match Transak's price (0.00) for item DMG0001</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (40.00) does not match Transak's price (0.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 07:39:33 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-16 11:39:31</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>4</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (55.00) does not match Transak's price (0.00) for item DMG0001</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (40.00) does not match Transak's price (0.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 07:43:20 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-16 11:43:18</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>4</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (55.00) does not match Transak's price (0.00) for item DMG0001</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (40.00) does not match Transak's price (0.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 07:49:21 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-16 11:49:19</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>4</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (40.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 07:52:43 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-16 11:52:40</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>4</OrderID><TransakOrderID>477</TransakOrderID><Status>2</Status></Body></Envelope>
+
+--Response ends--
+
+--11/16/2020 08:01:06 am Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-16 12:01:03</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>5</OrderID><TransakOrderID>478</TransakOrderID><Status>2</Status></Body></Envelope>
+
+--Response ends--

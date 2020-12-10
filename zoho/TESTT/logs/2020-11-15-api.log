@@ -1,0 +1,565 @@
+
+
+--11/15/2020 06:35:20 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:35:19</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:35:20 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:35:19</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:35:21 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:35:20</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:35:25 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:35:24</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:35:29 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:35:28</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:35:54 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:35:53</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>107</ErrorCode><ErrorText>Order (12345) already exists in Transak</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:35:54 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:35:53</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:36:08 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:36:07</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:36:26 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:36:25</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:36:38 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:36:37</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:37:25 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:37:24</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>107</ErrorCode><ErrorText>Order (12345) already exists in Transak</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:37:25 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:37:24</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:37:26 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:37:25</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:37:29 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:37:28</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:37:54 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:37:53</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>107</ErrorCode><ErrorText>Order (12345) already exists in Transak</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:37:54 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:37:53</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:38:08 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:38:07</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:38:39 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:38:38</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>107</ErrorCode><ErrorText>Order (12345) already exists in Transak</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:38:39 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:38:38</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:39:25 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:39:24</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:39:25 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:39:24</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:39:26 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:39:25</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:39:29 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:39:28</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:39:54 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:39:53</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>107</ErrorCode><ErrorText>Order (12345) already exists in Transak</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:39:54 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:39:53</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:40:08 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:40:07</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:40:38 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:40:37</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:41:25 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:41:24</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>107</ErrorCode><ErrorText>Order (12345) already exists in Transak</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:41:25 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:41:24</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:41:27 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:41:26</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:41:29 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:41:28</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:41:55 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:41:54</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>107</ErrorCode><ErrorText>Order (12345) already exists in Transak</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:41:55 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:41:54</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:42:08 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:42:07</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:42:47 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:42:46</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:43:05 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:43:05</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>107</ErrorCode><ErrorText>Order (12345) already exists in Transak</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:43:06 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:43:05</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:43:08 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:43:07</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:43:09 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>B2C</SourceID><TimeStamp>2020-11-15 22:43:09</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (459) sales program (3)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:43:14 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:43:13</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>107</ErrorCode><ErrorText>Order (12345) already exists in Transak</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:43:14 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:43:13</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:43:25 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:43:24</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>107</ErrorCode><ErrorText>Order (12345) already exists in Transak</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:43:25 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:43:24</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:43:30 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:43:29</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:43:56 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:43:54</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:43:56 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:43:55</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:44:05 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:44:04</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:44:12 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:44:11</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:44:27 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:44:26</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:45:20 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:45:19</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>107</ErrorCode><ErrorText>Order (12345) already exists in Transak</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:45:20 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:45:19</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:45:30 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:45:29</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:45:31 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:45:31</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:46:32 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:46:32</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>107</ErrorCode><ErrorText>Order (12345) already exists in Transak</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:46:33 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:46:32</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:47:20 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:47:19</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>107</ErrorCode><ErrorText>Order (12345) already exists in Transak</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:47:20 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:47:19</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:47:30 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:47:29</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:48:32 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:48:32</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>107</ErrorCode><ErrorText>Order (12345) already exists in Transak</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:48:32 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:48:32</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:49:20 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:49:19</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>107</ErrorCode><ErrorText>Order (12345) already exists in Transak</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:49:20 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:49:19</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:49:32 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:49:31</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:49:33 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:49:32</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:50:51 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:50:50</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:50:51 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:50:50</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:51:20 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:51:19</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:51:30 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:51:29</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:52:12 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:52:11</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:52:12 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:52:11</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:52:14 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:52:13</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:53:19 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:53:18</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:53:19 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:53:18</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:53:20 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:53:19</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:53:30 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:53:29</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:55:02 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:55:01</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:55:02 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:55:01</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:55:03 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:55:02</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:55:03 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:55:02</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:55:04 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:55:03</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:55:18 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:55:17</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:55:20 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:55:19</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:55:36 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:55:35</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>12345</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:57:22 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:57:21</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:57:55 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:57:54</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:57:57 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:57:56</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>1</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:59:02 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:59:01</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 06:59:04 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 22:59:03</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>1</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 07:00:52 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 23:00:52</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 07:03:20 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 23:03:19</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 07:06:05 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 23:06:04</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 07:08:30 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 23:08:29</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 07:13:12 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 23:13:11</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--
+
+--11/15/2020 07:18:26 pm Response starts--
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope><Header><MessageID>1</MessageID><MessageType>SetOrderStatus</MessageType><SourceID>DMG</SourceID><TimeStamp>2020-11-15 23:18:25</TimeStamp><EchoData></EchoData><SystemFields></SystemFields></Header><Body><OrderID>2</OrderID><Status>3</Status><OrderStatusErrors><OrderStatusError><ErrorCode>123</ErrorCode><ErrorText>Cannot process orders from source DMG, source is inactive</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>104</ErrorCode><ErrorText>PLU DMG0001, not available in customer's (528) sales program (4)</ErrorText></OrderStatusError><OrderStatusError><ErrorCode>105</ErrorCode><ErrorText>Order line item price (3,400.00) does not match Transak's price (55.00) for item DMG0001</ErrorText></OrderStatusError></OrderStatusErrors></Body></Envelope>
+
+--Response ends--

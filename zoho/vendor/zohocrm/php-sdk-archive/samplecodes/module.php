@@ -16,7 +16,9 @@ class Module
                             "client_id"=>ZOHO_CLIENT_ID,
                             "client_secret"=>ZOHO_CLIENT_SECRET,
                             "redirect_uri"=>ZOHO_REDIRECT_URI,
-                            "db_name" => 'CarbonOnClick',
+                            "apiBaseUrl"=>"https://www.zohoapis.eu", // was www.zohoapis.eu
+                            "apiVersion"=>"v2", // was V2 (capital V)
+                            //"db_name" => 'CarbonOnClick',
                             "currentUserEmail"=>ZOHO_CURRENT_USER_EMAIL
                         ); 
         ZCRMRestClient::initialize($configuration);
@@ -466,7 +468,10 @@ class Module
 
     public function getRecords()
     {
-        $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("{module_api_name}"); // To get module instance
+
+        $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Leads"); // To get module instance
+        //$moduleIns = ZCRMRestClient::getModule("Leads"); // To get module instance
+        
         $param_map=array("page"=>10,"per_page"=>10); // key-value pair containing all the parameters - optional
         $header_map = array("if-modified-since"=>"2019-11-15T15:26:49+05:30"); // key-value pair containing all the headers - optional
         $response = $moduleIns->getRecords($param_map,$header_map); // to get the records($param_map - parameter map,$header_map - header map
@@ -595,10 +600,15 @@ class Module
 
     public function getRecord()
     {
-        $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("{module_api_name}"); // To get module instance
+        $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Leads"); // To get module instance
         $param_map = array("fields"=>"Company,Last_Name"); // key-value pair containing all the params - optional
         $header_map = array("header_name"=>"header_value"); // key-value pair containing all the headers - optional
-        $response = $moduleIns->getRecord("{record_id}",$param_map,$header_map); // To get module records
+        $record_id = '4715952000000301422';
+        $response = $moduleIns->getRecord($record_id); // To get module records
+        // echo "<pre>";
+        // print_r($moduleIns);
+        // echo "</pre>";
+
         $record = $response->getData(); // To get response data
         try {
             echo "\n\n";
@@ -606,14 +616,14 @@ class Module
             echo $record->getModuleApiName(); // To get module api name
             echo $record->getLookupLabel(); // To get lookup object name
             $createdBy = $record->getCreatedBy();
-            echo $createdBy->getId(); // To get user_id who created the record
-            echo $createdBy->getName(); // To get user name who created the record
+            //echo $createdBy->getId(); // To get user_id who created the record
+            //echo $createdBy->getName(); // To get user name who created the record
             $modifiedBy = $record->getModifiedBy();
-            echo $modifiedBy->getId(); // To get user_id who modified the record
-            echo $modifiedBy->getName(); // To get user name who modified the record
+            //echo $modifiedBy->getId(); // To get user_id who modified the record
+            //echo $modifiedBy->getName(); // To get user name who modified the record
             $owner = $record->getOwner();
-            echo $owner->getId(); // To get record owner_id
-            echo $owner->getName(); // To get record owner name
+            //echo $owner->getId(); // To get record owner_id
+            //echo $owner->getName(); // To get record owner name
             echo $record->getCreatedTime(); // To get record created time
             echo $record->getModifiedTime(); // To get record modified time
             echo $record->getLastActivityTime(); // To get last activity time(latest modify/view time)

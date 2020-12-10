@@ -243,9 +243,66 @@ class Gh_Hook_Commerce_Public {
 			foreach ($custom_checkout_field_mapping as $key => $value) {
 		       	$gh_unique_id 			=   $value['gh_checkout_field_unique_id'];
 	     		
-	     		if ( ! empty( $_POST[$gh_unique_id] ) )
+	     		if ( ! empty( $_POST[$gh_unique_id] ) ){
         			update_post_meta( $order_id, $gh_unique_id, sanitize_text_field( $_POST[$gh_unique_id] ) );
+	     		}
 			}	
 		}
+	}
+
+
+	public function gh_rename_checkout_place_order_button_callback(){
+
+		return $this->options_en['gh_rename_checkout_place_order_button'];
+
+	}
+
+	public function gh_add_content_under_place_order_button_callback(){
+
+		echo $this->options_en['gh_add_content_under_place_order_button_text'];
+
+	}
+
+	public function gh_show_distinct_cart_item_count_callback( $count ) {
+	   $count = count( WC()->cart->get_cart() );
+	   return $count;
+	}
+
+
+	public function gh_split_cart_table_callback(){
+		if ( ! is_cart() ) return;
+
+		if ( WC()->cart->is_empty() ) return;
+
+		$i = 0;
+		$split = array();
+
+		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+			$cart_item_title 	= $cart_item['data']->get_title();
+			$first_letter 		= substr( $cart_item_title, 0, 1 );
+
+			if ( 0 == $i || ( 0 < $i && ! in_array( $first_letter, $split ) ) ) {
+				$split[$i] = $first_letter;
+			}
+			$i++;
+		}
+		?>
+
+		<script type="text/javascript">
+			jQuery(document).ready(function($){
+				var indx = $('.woocommerce-cart-form__contents tbody tr').length;
+				var rows = <?php echo json_encode($split); ?>;
+				$.each(rows,function(key,value){   
+					var newRow = $('<tr><td colspan="6">'+value+'</td></tr>');
+					newRow.insertBefore($('.woocommerce-cart-form__contents tbody tr.woocommerce-cart-form__cart-item:nth('+key+')'));
+				});
+			});
+		</script>
+		<?php  
+	}
+
+
+	public function gh_edit_continue_shopping_link_callback(){
+		return $this->options_en['gh_edit_continue_shopping_link'];
 	}
 }
