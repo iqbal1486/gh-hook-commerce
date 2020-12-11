@@ -30,7 +30,10 @@ class Gh_Hook_Commerce_Activator {
 	 * @since    1.0.0
 	 */
 	public static function activate() {
-
+		$error = 'Please install and activate <b>WooCommerce</b> plugin.';
+        if ( !class_exists( 'WooCommerce' ) ) {
+           die( 'Plugin not activated: ' . $error );
+        }
 	}
 
 }

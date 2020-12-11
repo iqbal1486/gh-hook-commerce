@@ -258,54 +258,7 @@ class Gh_Hook_Commerce_Admin {
             'plugin_basename'   =>  plugin_basename( plugin_dir_path( __DIR__ ) . $this->plugin_name . '.php' ),
         );
 
-       
-        /*
-        * Woo Global Mods
-        */
-        /*
-        $fields[] = array(
-            'name'   => 'gh-global-mods',
-            'title'  => 'Woo Global Mods',
-            'icon'   => 'dashicons-universal-access',
-            'fields' => array(
-
-                array(
-                    'id'          => 'gh_default_product_image',
-                    'type'        => 'image',
-                    'title'       => 'Default Product Image',
-                    'after'       => 'Change the placeholder image that is shown if no image is added to the product.',
-                ),
-
-                array(
-                    'id'    => 'gh_remove_breadcrumb',
-                    'type'  => 'switcher',
-                    'title' => 'Remove Breadcrumbs',
-                    'label' => 'Do you want to do this?',
-                    'default' => 'no',
-                ),
-
-                array(
-                    'id'      => 'gh_change_breadcrumb_separator',
-                    'type'    => 'text',
-                    'title'   => 'Change Breadcrumb Separator',
-                    'label'   => 'You want to do this?',
-                    'dependency' => array( 'gh_remove_breadcrumb', '==', 'false' ),
-
-                ),
-
-            
-                array(
-                    'id'    => 'gh_remove_sale_badge',
-                    'type'  => 'switcher',
-                    'title' => 'Remove Sale Badge',
-                    'label' => 'Do you want to do this?',
-                    'default' => 'no',
-                ),
-
-            )
-        );
-        */
-
+   
         /*
         * Woo Checkout Fields Mods
         */
@@ -320,9 +273,9 @@ class Gh_Hook_Commerce_Admin {
                     'id'    => 'gh_add_custom_checkout_field',
                     'type'  => 'checkbox',
                     'title' => 'Would you like to add custom checkout field?',
-                    'label' => 'Do you want to do this?',
+                    'label' => 'Add custom checkout fields',
                     'style'    => 'fancy',
-                    'after' => '<i>If you check this and the other checkbox, a text field will appier.</i>'
+                    'after' => '<i>If you check this, you will see repeater fields visible to create custom fields.</i>'
                 ),
 
                 /*
@@ -346,11 +299,11 @@ class Gh_Hook_Commerce_Admin {
                         array(
                             'id'          => 'gh_checkout_field_type',
                             'type'           => 'select',
-                            'title'       => 'Type of field',
+                            'title'       => 'Field Type',
                             'query'          => array(
                                 'type'          => 'callback',
                                 'function'      => array( $this, 'get_checkout_field_input_types' ),
-                                'args'          => array() // WordPress query args
+                                'args'          => array() 
                             ),
                             'class'       => 'repeater-50 chosen width-150',
                         ),
@@ -359,11 +312,11 @@ class Gh_Hook_Commerce_Admin {
                         array(
                             'id'          => 'gh_checkout_field_add_to',
                             'type'           => 'select',
-                            'title'       => 'Where to add the field',
+                            'title'       => 'Location',
                             'query'          => array(
                                 'type'          => 'callback',
                                 'function'      => array( $this, 'get_checkout_field_types' ),
-                                'args'          => array() // WordPress query args
+                                'args'          => array()
                             ),
                             'class'       => 'repeater-50 chosen width-150',
                         ),
@@ -376,7 +329,7 @@ class Gh_Hook_Commerce_Admin {
                             'type'        => 'text',
                             'title'       => 'Checkout field Unique Id',
                             'class'       => 'repeater-50',
-                            'description' => 'This will be the label of the input field to be replaced',
+                            'description' => 'This will be treated as "name" attribute of the field.',
                         ),
 
                         array(
@@ -384,23 +337,20 @@ class Gh_Hook_Commerce_Admin {
                             'type'        => 'text',
                             'title'       => 'Checkout field Error message for validation',
                             'class'       => 'repeater-50',
-                            'description' => 'This will be the label of the input field to be replaced',
                         ),
 
                         array(
                             'id'          => 'gh_checkout_field_label',
                             'type'        => 'text',
-                            'title'       => 'Checkout field label',
+                            'title'       => 'Label',
                             'class'       => 'repeater-50',
-                            'description' => 'This will be the label of the input field to be replaced',
                         ),
 
                         array(
                             'id'          => 'gh_checkout_field_placeholder',
                             'type'        => 'text',
-                            'title'       => 'Checkout field placeholder',
+                            'title'       => 'Placeholder',
                             'class'       => 'repeater-50',
-                            'description' => 'This will be the label of the input field to be replaced',
                         ),
 
                         array(
@@ -416,26 +366,7 @@ class Gh_Hook_Commerce_Admin {
                             'type'        => 'checkbox',
                             'title'       => 'Is checkout field is required?',
                             'class'       => 'repeater-50',
-                            'description' => 'This will be the label of the input field to be replaced',
                         ),
-
-                        array(
-                            'id'          => 'gh_checkout_field_show_on_view_order',
-                            'type'        => 'checkbox',
-                            'title'       => 'Display Field on View Order page?',
-                            'class'       => 'repeater-50',
-                            'description' => 'This will be the label of the input field to be replaced',
-                        ),
-                        /*
-                        array(
-                            'id'          => 'gh_checkout_field_add_to_email',
-                            'type'        => 'checkbox',
-                            'title'       => 'Add the custom field to email?',
-                            'class'       => 'repeater-50',
-                            'description' => 'This will be the label of the input field to be replaced',
-                        ),
-                        */
-
                     ),
 
                 ),
@@ -457,15 +388,11 @@ class Gh_Hook_Commerce_Admin {
                 array(
                     'id'    => 'gh_rename_checkout_page_label',
                     'type'  => 'checkbox',
-                    'title' => 'Rename Checkout Page Labels',
+                    'title' => 'Rename Checkout Fields Labels',
                     'label' => 'Do you want to do this?',
                     'style'    => 'fancy',
-                    'after' => '<i>If you check this and the other checkbox, a text field will appier.</i>'
                 ),
 
-                /*
-                *https://www.businessbloomer.com/woocommerce-rename-state-label-checkout/
-                */
                 array(
                     'id'      => 'gh_rename_checkout_page_label_mapping',
                     'type'    => 'group',
@@ -488,7 +415,7 @@ class Gh_Hook_Commerce_Admin {
                             'query'          => array(
                                 'type'          => 'callback',
                                 'function'      => array( $this, 'get_checkout_fields' ),
-                                'args'          => array() // WordPress query args
+                                'args'          => array()
                             ),
                             'class'       => 'repeater-50 chosen width-150',
                             'description' => 'This will be the name of the input field of existing checkout fields',
@@ -588,39 +515,33 @@ class Gh_Hook_Commerce_Admin {
             'icon'   => 'dashicons-cart',
             'fields' => array(
 
-                /*
-                *https://www.businessbloomer.com/woocommerce-how-to-alter-cart-items-count/
-                */
                 array(
                     'id'    => 'gh_show_distinct_cart_item_count',
                     'type'  => 'checkbox',
                     'title' => 'Show Distint Cart Item Count',
                     'label' => 'Do you want to do this?',
                     'style'    => 'fancy',
-                    'after' => '<i><a href="https://www.businessbloomer.com/woocommerce-how-to-alter-cart-items-count/">Clcik here</a></i>'
+                    'after' => '<i>some business models require to count the number of distinct items in the Cart, no matter their respective cart quantities. So, if there are 2x “Item 1” and 4x “Item 2”, this altered counter would show 1+1=2 and not 2+4=6. Enable to add this logic</i>'
                 ),
 
 
-                /*
-                *https://www.businessbloomer.com/woocommerce-split-cart-table-az-headings/
-                */
                 array(
                     'id'     => 'gh_split_cart_table',
                     'type'  => 'checkbox',
                     'title' => 'Split Cart Table',
                     'label' => 'Split Cart Table with A-Z headings',
                     'style'    => 'fancy',
-                    'after' => '<i>TEXT HTML</i>'
+                    'after' => '<i>
+                                    <h2>A</h2>
+                                    <div>Item 1 Title: “AAA”</div>
+                                    <div>Item 2 Title: “ACC”</div>
+                                    <h2>B</h2>
+                                    <div>Item 3 Title: “BDD”</div>
+                                    <div>Item 4 Title: “BEE”</div>
+                                </i>'
                 ),
 
-                /*
-                *https://www.businessbloomer.com/woocommerce-remove-cart-product-link-cart-page/
-                */
-
-                
-                /*
-                *https://www.businessbloomer.com/woocommerce-edit-continue-shopping-link-redirect/
-                */
+               
                 array(
                     'id'      => 'gh_edit_continue_shopping_link',
                     'type'    => 'select',
@@ -628,11 +549,10 @@ class Gh_Hook_Commerce_Admin {
                     'query'   => array(
                         'type'          => 'callback',
                         'function'      => array( $this, 'get_all_pages' ),
-                        'args'          => array() // WordPress query args
+                        'args'          => array()
                     ),
                     'default_option' => 'Select page to set as "Continue Shopping"',
                     'class'       => 'repeater-50 chosen width-150',
-                    'description' => 'This will be the name of the input field of existing checkout fields',
                 ),
 
             )
@@ -647,39 +567,18 @@ class Gh_Hook_Commerce_Admin {
             'icon'   => 'dashicons-yes-alt',
             'fields' => array(
 
-                /*
-                *https://www.businessbloomer.com/woocommerce-add-shipping-phone-checkout/
-                */
-                // array(
-                //     'id'    => 'gh_checkout_shipping_phone',
-                //     'type'  => 'checkbox',
-                //     'title' => 'Shipping Phone Field',
-                //     'label' => 'Display Shipping Phone Field',
-                //     'style' => 'fancy',
-                //     'after' => '<i>Display Shipping Phone Field on checkout page.</i>'
-                // ),
-
-
-                /*
-                *https://www.businessbloomer.com/woocommerce-rename-place-order-button-checkout/
-                */
                 array(
                     'id'          => 'gh_rename_checkout_place_order_button',
                     'type'        => 'text',
                     'title'       => 'Rename "Place Order" Button',
-                    'description' => 'This will be the label of the input field to be replaced',
                 ),
 
-                /*
-                *https://www.businessbloomer.com/woocommerce-add-content-under-place-order-button-checkout/
-                */
                 array(
                     'id'    => 'gh_add_content_under_place_order_button',
                     'type'  => 'checkbox',
                     'title' => 'Add Content Under Place Order Button',
-                    'label' => 'Do you want to do this?',
+                    'label' => 'Check this to add Content',
                     'style' => 'fancy',
-                    'after' => '<i>If you check this and the other checkbox, a text field will appier.</i>'
                 ),
 
                 array(
@@ -700,63 +599,6 @@ class Gh_Hook_Commerce_Admin {
                         'style'        => 'height: 300px; max-width: 700px;',
                     ),
                 ),
-
-
-                /*
-                *https://www.businessbloomer.com/woocommerce-display-order-delivery-date-checkout/
-                */
-                /*
-                array(
-                    'id'    => 'gh_show_order_delivery_date',
-                    'type'  => 'checkbox',
-                    'title' => 'Order Delivery Date',
-                    'label' => 'Display Order Delivery Date at Checkout',
-                    'style' => 'fancy',
-                    'after' => '<i>If you check this and the other checkbox, a text field will appier.</i>'
-                ),
-
-                
-                array(
-                    'id'      => 'gh_order_delivery_date_group',
-                    'type'    => 'group',
-                    'dependency' => array( 'gh_show_order_delivery_date', '==', 'true' ),
-                    'title'   => esc_html__( 'Order Delivery Date Setting', 'gh-hook-commerce' ),
-                    'options' => array(
-                        'group_title'       => esc_html__( 'Delivery Date Setting', 'gh-hook-commerce' ),
-                        'closed'            => false,
-                    ),
-                    'fields'  => array(
-
-                        array(
-                            'id'          => 'gh_order_delivery_date_label',
-                            'type'        => 'text',
-                            'title'       => 'Order Delivery Date Label',
-                            'description' => 'Default label will be "Select Delivery Date"',
-                        ),
-
-                        array(
-                            'id'          => 'gh_order_delivery_date_placeholder',
-                            'type'        => 'text',
-                            'title'       => 'Rename "Place Order" Button',
-                            'description' => 'Default label will be "Click to open calendar"',
-                        ),
-
-                    ),
-                )
-                */
-
-                /*
-                *https://www.businessbloomer.com/woocommerce-deny-checkout-user-pending-orders/
-                */
-                /*
-                *https://www.businessbloomer.com/woocommerce-holidaypauseclosed-mode/
-                */
-                /*
-                *https://www.businessbloomer.com/woocommerce-add-house-number-field-checkout/
-                */
-                /*
-                *https://www.businessbloomer.com/woocommerce-add-custom-checkout-field-php/
-                */
             )
         );
 
