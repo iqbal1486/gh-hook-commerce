@@ -1,19 +1,19 @@
 <table class="form-table" role="presentation">
 	<tr>
 		<th>Conversion Form Shortcode</th>
-		<td>[transak_conversion_form redirect_to=page_id] 
+		<td>[abrac_conversion_form redirect_to=page_id] 
 			<p class="description" id="tagline-description">page_id  must be replaced with the actual page id of listing page. This is the id where the form will get redirected</p>
 		</td>
 	</tr>
 
 	<tr>
 		<th>Listing Form Shortcode</th>
-		<td>[transak_listing_form]</td>
+		<td>[abrac_listing_form]</td>
 	</tr>
 	
 	<tr>
 		<th>Moonpay iFrame Shortcode</th>
-		<td>[transak_moonpay_payment redirect_to=page_id]
+		<td>[abrac_moonpay_payment redirect_to=page_id]
 			<p class="description" id="tagline-description">page_id  must be replaced with the actual page id. This is the id where the page get redirected if access directly. By default, it will get redirected to conversion form page</p>
 		</td>
 	</tr>
