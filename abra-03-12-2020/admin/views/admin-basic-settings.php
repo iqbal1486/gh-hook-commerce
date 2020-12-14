@@ -47,31 +47,5 @@ return apply_filters( 'transak_widget_text_settings', array(
         'class'     => 'regular-text',
     ),
 
-    array(
-        'title'     => __( 'Geo Location API Key', 'wp-crypto' ),
-        'id'        => 'transak_geolocation_api_key',
-        'type'      => 'text',
-        'class'     => 'regular-text',
-    ),
-    
-    array(
-        'title'     => __( 'Footer Text', 'wp-crypto' ),
-        'id'        => 'transak_footer_text',
-        'type'      => 'wp_editor',
-        'class'     => 'regular-text',
-        'custom_attributes' => array(
-                                    'rows' => 10,
-                                ),
-    ),
-
-    array(
-        'title'     => __( 'Listing Sidebar', 'wp-crypto' ),
-        'id'        => 'transak_listing_sidebar',
-        'type'      => 'wp_editor',
-        'class'     => 'regular-text',
-        'custom_attributes' => array(
-                                    'rows' => 10,
-                                ),
-    ),
 ) );
 ?>

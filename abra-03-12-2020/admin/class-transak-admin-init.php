@@ -68,8 +68,8 @@ class TRANSAK_Admin_Init {
      */
     public function add_admin_menu() {
         add_menu_page(
-            esc_html__( 'Abra', 'wp-crypto' ),
-            esc_html__( 'Abra', 'wp-crypto' ),
+            esc_html__( 'Transak', 'wp-crypto' ),
+            esc_html__( 'Transak', 'wp-crypto' ),
             'manage_options',
             'transak-settings',
             array( $this, 'admin_setting_page' ),
@@ -83,12 +83,12 @@ class TRANSAK_Admin_Init {
     // Admin general setting page.
     public function admin_setting_page() {
         echo '<div class="wrap">';
-        echo '<h1>' . esc_html__( 'Abra Settings', 'wp-crypto' ) . '</h1>';
-        settings_errors();
-        do_action( 'transak_admin_notifications' );
-        echo '<hr>';
-        $this->settings_api->show_navigation();
-        $this->settings_api->show_forms();
+            echo '<h1>' . esc_html__( 'Transak Settings', 'wp-crypto' ) . '</h1>';
+                settings_errors();
+                do_action( 'transak_admin_notifications' );
+            echo '<hr>';
+                $this->settings_api->show_navigation();
+                $this->settings_api->show_forms();
         echo '</div>';
     }
 

@@ -255,7 +255,7 @@ class Transaction_list extends WP_List_Table {
 }
 
 
-class Abra_Trnsaction_Display {
+class Transak_Trnsaction_Display {
 
 	// class instance
 	static $instance;
@@ -278,8 +278,8 @@ class Abra_Trnsaction_Display {
 		
 		$hook =  add_submenu_page(
             'transak-settings',
-            esc_html__( 'Abra Transactions', 'wp-crypto' ),
-            esc_html__( 'Abra Transactions', 'wp-crypto' ),
+            esc_html__( 'Transak Transactions', 'wp-crypto' ),
+            esc_html__( 'Transak Transactions', 'wp-crypto' ),
             'manage_options',
             'transak-transactions',
             array( $this, 'plugin_settings_page' )
@@ -296,7 +296,7 @@ class Abra_Trnsaction_Display {
 	public function plugin_settings_page() {
 		?>
 		<div class="wrap">
-			<h2>Abra Transactions</h2>
+			<h2>Transak Transactions</h2>
 
 			<div id="transaktransactions-table">
 				<div id="post-body" class="metabox-holder">
@@ -345,4 +345,4 @@ class Abra_Trnsaction_Display {
 
 }
 
-Abra_Trnsaction_Display::get_instance();
+Transak_Trnsaction_Display::get_instance();

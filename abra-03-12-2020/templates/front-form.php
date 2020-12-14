@@ -16,13 +16,10 @@
       }
 
       $TRANSAK_DEFAULT_COUNTRY = TRANSAK_DEFAULT_COUNTRY;
-      if(isset($record->country->isoCode) && !empty($record->country->isoCode)){
-        $TRANSAK_DEFAULT_COUNTRY   = $record->country->isoCode;
-      }
+ 
     
     $error_form_class = "";
     wp_enqueue_script( 'transak-front-form-script' );
-    
     if(!$get_crypto_currencies || !$get_list_countries || !$get_fiat_currencies ){
         if ( !isset( $_SESSION['transak_count'] ) ) 
             $_SESSION['transak_count'] = 1; 

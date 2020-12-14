@@ -1,0 +1,30 @@
+/* Common CSS for templates */
+.wcl-clearfix {
+    clear: both;
+}
+
+.wcl-shadow {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.wcl-popup-container * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.wcl-popup-container {
+    width: auto;
+    position: fixed;
+    z-index: 9999999;
+}
+a.wcl-product-query-btn {
+    display: inline-flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 8px;
+    border-radius: 3px;
+    position: relative;
+    text-decoration: none !important;
+    margin: 5px 0;
+}

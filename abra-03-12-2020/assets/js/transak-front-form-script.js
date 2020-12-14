@@ -36,60 +36,20 @@ var conversion_callback = function(){
 					    },
 					    success: function(data) {
 					        console.log(data);
-					        //console.log(data.totalAmount);
-					        if(data.integration_type == 'moonpay'){
-					        	if(data.type && data.type == "BadRequestError"){
-						        	var message = data.message;
-						        	var exp_message = message.split(',');
-						        	jQuery('#cryptocurrency-error').html("<span id='error_msg'>"+exp_message[0]+"</span>");
-						        	jQuery('button.buy-now-button').attr("disabled", "disabled");
-						        	jQuery('#cryptocurrency-amount-value').val('0');
+					        var currencies_quote;
+					        currencies_quote = data.currencies_quote.response;
+					        if(currencies_quote.error){
+				        		/*Handling Error here in future*/
+					        	var message = currencies_quote.error.message;
+					        	jQuery('#cryptocurrency-error').html("<span id='error_msg'>"+message+"</span>");
+					        	jQuery('button.buy-now-button').attr("disabled", "disabled");
+					        	jQuery('#cryptocurrency-amount-value').val('0');
+					        	
 
-						        }else{
-						        	jQuery('#cryptocurrency-error').html('');
-						        	jQuery('button.buy-now-button').removeAttr("disabled", "disabled");
-						        	jQuery('#cryptocurrency-amount-value').val(data.quoteCurrencyAmount);
-						        }	
-					        }else if(data.integration_type == 'simplex'){
-					        	if(data.error){
-					        		/*Handling Error here in future*/
-						        	var message = data.error;
-						        	jQuery('#cryptocurrency-error').html("<span id='error_msg'>"+message+"</span>");
-						        	jQuery('button.buy-now-button').attr("disabled", "disabled");
-						        	jQuery('#cryptocurrency-amount-value').val('0');
-						        	
-
-						        }else{
-						        	jQuery('#cryptocurrency-error').html('');
-						        	jQuery('button.buy-now-button').removeAttr("disabled", "disabled");
-						        	jQuery('#cryptocurrency-amount-value').val(data.digital_money.amount);
-						        }
-					        }else if(data.integration_type == 'transak'){
-					        	if(data.error){
-					        		/*Handling Error here in future*/
-						        	var message = data.error.message;
-						        	jQuery('#cryptocurrency-error').html("<span id='error_msg'>"+message+"</span>");
-						        	jQuery('button.buy-now-button').attr("disabled", "disabled");
-						        	jQuery('#cryptocurrency-amount-value').val('0');
-						        	
-
-						        }else{
-						        	jQuery('#cryptocurrency-error').html('');
-						        	jQuery('button.buy-now-button').removeAttr("disabled", "disabled");
-						        	jQuery('#cryptocurrency-amount-value').val(data.cryptoAmount);
-						        }
-					        }else if(data.integration_type == 'banxa'){
-					        	if(typeof data.data != 'undefined'){
-						        	jQuery('#cryptocurrency-error').html('');
-						        	jQuery('button.buy-now-button').removeAttr("disabled", "disabled");
-						        	jQuery('#cryptocurrency-amount-value').val(data.data.prices[0].coin_amount);
-
-						        }else{
-						        	jQuery('#cryptocurrency-error').html("<span id='error_msg'>Something went wrong. please update proper price</span>");
-						        	jQuery('button.buy-now-button').attr("disabled", "disabled");
-						        	jQuery('#cryptocurrency-amount-value').val('0');
-						        	
-						        }	
+					        }else{
+					        	jQuery('#cryptocurrency-error').html('');
+					        	jQuery('button.buy-now-button').removeAttr("disabled", "disabled");
+					        	jQuery('#cryptocurrency-amount-value').val(currencies_quote.cryptoAmount);
 					        }
 					    },
 					    error:function(e){
