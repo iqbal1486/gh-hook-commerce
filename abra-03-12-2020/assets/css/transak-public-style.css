@@ -52,7 +52,7 @@ letter-spacing: 0.5px; background: #6F2ACD; padding: 2px 6px; display: block; co
 div.payment-method-images { display: block; width: 100%; margin: 5px 0 0 0; text-align: center; height: 45px }
 .listing-single-block div.payment-method-images { width: 100%; }
 div.payment-method-images img { padding: 3px; display: inline-block; border: 1px solid #eee; height: 25px; width: 40px; margin: 8px 3px; background: #ddd; border-radius: 5px; }
-select[name='currency-code-value'], select[name='cryptocurrency-code-value'] { background: #ebe8eb; }
+select[name='fiatCurrency'], select[name='cryptoCurrency'] { background: #ebe8eb; }
 button.buy-now-button { background: #6f2acd; border-radius: 50px; }
 .transak-title-wrapper { background: #fff; text-align: center; font-size: 30px; font-weight: bold; text-transform: uppercase; margin: -20px -20px 0px -20px; }
 button.buy-now-button:disabled { background: lightgray; cursor: not-allowed; }

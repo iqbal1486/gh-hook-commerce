@@ -2,13 +2,14 @@ var currentRequest = null;
 
 var conversion_callback = function(){
 	
-	var currencyAmountValue 	= jQuery('#currency-amount-value').val();	
-	var currencyCodeValue 		= jQuery('#currency-code-value').val();	
-	var cryptocurrencyCodeValue = jQuery('#cryptocurrency-code-value').val();	
+	var currencyAmountValue 	= jQuery('#fiatAmount').val();	
+	var currencyCodeValue 		= jQuery('#fiatCurrency').val();	
+	var cryptocurrencyCodeValue = jQuery('#cryptoCurrency').val();	
 	var countryValue 			= jQuery('#country-value').val();
-	var cryptocurrencytext	    = jQuery('#cryptocurrency-code-value').find(':selected').attr('data-name');
+	var cryptocurrencytext	    = jQuery('#cryptoCurrency').find(':selected').attr('data-name');
 	
 	jQuery('#cryptocurrency-error').html("");
+	jQuery('#transak_response').html("");
 	if(currencyAmountValue == 0){
 		jQuery('#cryptocurrency-error').html("<span id='error_msg'>Amount is too small</span>");
 		return true;
@@ -29,7 +30,7 @@ var conversion_callback = function(){
 					    	},
 					    url: transakObj.ajax_url,
 					    beforeSend : function()    {           
-					        jQuery('#cryptocurrency-amount-value').val('...');
+					        jQuery('#cryptoAmount').val('...');
 					        if(currentRequest != null) {
 					            currentRequest.abort();
 					        }
@@ -37,23 +38,27 @@ var conversion_callback = function(){
 					    success: function(data) {
 					        console.log(data);
 					        var currencies_quote;
-					        currencies_quote = data.currencies_quote.response;
+					        currencies_quote = data.currencies_quote;
 					        if(currencies_quote.error){
 				        		/*Handling Error here in future*/
 					        	var message = currencies_quote.error.message;
 					        	jQuery('#cryptocurrency-error').html("<span id='error_msg'>"+message+"</span>");
 					        	jQuery('button.buy-now-button').attr("disabled", "disabled");
-					        	jQuery('#cryptocurrency-amount-value').val('0');
+					        	jQuery('#cryptoAmount').val('0');
+					        	jQuery('#transak_response').html('');
+					        	
 					        	
 
 					        }else{
 					        	jQuery('#cryptocurrency-error').html('');
 					        	jQuery('button.buy-now-button').removeAttr("disabled", "disabled");
-					        	jQuery('#cryptocurrency-amount-value').val(currencies_quote.cryptoAmount);
+					        	jQuery('#cryptoAmount').val(currencies_quote.cryptoAmount);
+					        	jQuery('#transak_response').html(data.html);
+
 					        }
 					    },
 					    error:function(e){
-					      	jQuery('#cryptocurrency-amount-value').val('0');
+					      	jQuery('#cryptoAmount').val('0');
 					    }
 					});
   	
@@ -65,16 +70,16 @@ jQuery(document).ready(function(e){
 	/*Conversion Form Callback Functions*/	
 	conversion_callback();
 
-	jQuery('body').on("keyup", ".currency-amount-value", function(){
+	jQuery('body').on("keyup", ".fiatAmount", function(){
 	    conversion_callback()
   	});
 
   	jQuery('body').on("change", ".t-conversion", function(){
   		/*
   		if(jQuery(this).find(':selected').attr('data-currency')){
-	    	jQuery("#currency-code-value").val(jQuery(this).find(':selected').attr('data-currency'));
-	    	if (!jQuery("#currency-code-value option:selected").length) {
-	    		jQuery("#currency-code-value").val('usd');
+	    	jQuery("#fiatCurrency").val(jQuery(this).find(':selected').attr('data-currency'));
+	    	if (!jQuery("#fiatCurrency option:selected").length) {
+	    		jQuery("#fiatCurrency").val('usd');
 			}
 	    }
 	    */

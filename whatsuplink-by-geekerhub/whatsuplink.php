@@ -8,7 +8,7 @@
 * Version:     1.0.0
 * License:     GPL2
 * License URI: https://www.gnu.org/licenses/gpl-2.0.html
-* Text Domain: wc-wcl
+* Text Domain: wc-gh
 * Domain Path: languages
 */
 
@@ -57,13 +57,13 @@ if ( ! defined( 'BITLY_API_URL' ) ) {
 }
 
 // Load plugin with plugins_load
-function wcl_init() {
-	require_once WCL_PLUGIN_PATH . 'class-wcl-init.php';
+function gh_init() {
+	require_once WCL_PLUGIN_PATH . 'class-gh-init.php';
     
-    $wcl_init = new WCL_Init;
-    $wcl_init->init();
+    $gh_init = new WCL_Init;
+    $gh_init->init();
 }
-add_action( 'plugins_loaded', 'wcl_init', 20 );
+add_action( 'plugins_loaded', 'gh_init', 20 );
 
 
 ?>

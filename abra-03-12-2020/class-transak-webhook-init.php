@@ -43,8 +43,8 @@ class TRANSAK_Webhook_Init {
             $defaultCurrencyCode    = strtolower($webhookData->cryptoCurrency);
             $externalTransactionId  = $webhookData->partnerOrderId;
             $externalCustomerId     = $webhookData->partnerCustomerId;
-            $baseCurrencyAmount     = $webhookData->fiatAmount;
-            $crypto_currency_amount = $webhookData->cryptoAmount;
+            $fiatAmount     = $webhookData->fiatAmount;
+            $cryptoAmount = $webhookData->cryptoAmount;
 
             $ip  = "";
 
@@ -70,8 +70,8 @@ class TRANSAK_Webhook_Init {
                     'transaction_id'    => $externalTransactionId,
                     'currency'          => $baseCurrencyCode,
                     'crypto_currency'   => $defaultCurrencyCode,
-                    'amount'            => $baseCurrencyAmount,
-                    'crypto_currency_amount' => $crypto_currency_amount,
+                    'amount'            => $fiatAmount,
+                    'cryptoAmount' => $cryptoAmount,
                     'provider_name'     => 'transak',
                     'raw_data'          => maybe_serialize($bodydecrypted),
                     'user_agent'        => $_SERVER['HTTP_USER_AGENT'],
@@ -87,7 +87,7 @@ class TRANSAK_Webhook_Init {
                         'customer_id'       => $externalCustomerId,
                         'currency'          => $baseCurrencyCode,
                         'crypto_currency'   => $defaultCurrencyCode,
-                        'amount'            => $baseCurrencyAmount,
+                        'amount'            => $fiatAmount,
                         'provider_name'     => 'transak',
                         'webhook_status'    => $status,
                         'raw_data'          => maybe_serialize($bodydecrypted),

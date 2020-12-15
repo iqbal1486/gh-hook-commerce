@@ -14,18 +14,18 @@ class TRANSAK_Front_Form_Shortcode {
     }
 
     public function moonpay_insert_update_redirect_callback_from_main_form(){
-        if(isset($_POST['currency-amount-value']) && !empty($_POST['currency-amount-value'])) {
+        if(isset($_POST['fiatAmount']) && !empty($_POST['fiatAmount'])) {
                 global $table_prefix, $wpdb;
 
                 $timestamp               = time();  
                 $externalCustomerId      = $timestamp.'.'.rand();
                 $externalTransactionId   = 'eti_'.$timestamp.'_aggregator';
 
-                $baseCurrencyAmount     = $_POST['currency-amount-value'];
-                $quoteCurrencyAmount    = $_POST['cryptocurrency-amount-value'];
+                $fiatAmount     = $_POST['fiatAmount'];
+                $cryptoAmount    = $_POST['cryptoAmount'];
 
-                $baseCurrencyCode       = $_POST['currency-code-value'];
-                $defaultCurrencyCode    = $_POST['cryptocurrency-code-value'];
+                $baseCurrencyCode       = $_POST['fiatCurrency'];
+                $defaultCurrencyCode    = $_POST['cryptoCurrency'];
                 $countryValue           = $_POST['country-value'];
 
                 $extraFeeAmount         = $_POST['extraFeeAmount'];
@@ -57,8 +57,8 @@ class TRANSAK_Front_Form_Shortcode {
                         'currency'          => $baseCurrencyCode,
                         'crypto_currency'   => $defaultCurrencyCode,
                         'country_code'      => $countryValue,    
-                        'amount'            => $baseCurrencyAmount,
-                        'crypto_currency_amount' => $quoteCurrencyAmount,
+                        'amount'            => $fiatAmount,
+                        'cryptoAmount' => $cryptoAmount,
                         'provider_name'     => $provider_name,
                         'raw_data'          => maybe_serialize($_POST),
                         'user_agent'        => $_SERVER['HTTP_USER_AGENT'],
@@ -75,8 +75,8 @@ class TRANSAK_Front_Form_Shortcode {
                             'currency'          => $baseCurrencyCode,
                             'crypto_currency'   => $defaultCurrencyCode,
                             'country_code'      => $countryValue,    
-                            'amount'            => $baseCurrencyAmount,
-                            'crypto_currency_amount' => $quoteCurrencyAmount,
+                            'amount'            => $fiatAmount,
+                            'cryptoAmount' => $cryptoAmount,
                             'provider_name'     => $provider_name,
                             'raw_data'          => maybe_serialize($_POST),
                             'user_agent'        => $_SERVER['HTTP_USER_AGENT'],
@@ -100,7 +100,7 @@ class TRANSAK_Front_Form_Shortcode {
                 }
 
                 $data = array(
-                    'baseCurrencyAmount'    => $baseCurrencyAmount,
+                    'fiatAmount'    => $fiatAmount,
                     'baseCurrencyCode'      => $baseCurrencyCode,
                     'defaultCurrencyCode'   => $defaultCurrencyCode,
                     'externalCustomerId'    => $externalCustomerId,
@@ -122,8 +122,8 @@ class TRANSAK_Front_Form_Shortcode {
 
                 $externalTransactionId  = $_GET['externalTransactionId'];
                 $externalCustomerId     = $_GET['externalCustomerId'];
-                $baseCurrencyAmount     = $_GET['baseCurrencyAmount'];
-                $quoteCurrencyAmount    = $_GET['quoteCurrencyAmount'];
+                $fiatAmount     = $_GET['fiatAmount'];
+                $cryptoAmount    = $_GET['cryptoAmount'];
 
                 $baseCurrencyCode       = $_GET['baseCurrencyCode'];
                 $defaultCurrencyCode    = $_GET['defaultCurrencyCode'];
@@ -156,8 +156,8 @@ class TRANSAK_Front_Form_Shortcode {
                         'currency'          => $baseCurrencyCode,
                         'crypto_currency'   => $defaultCurrencyCode,
                         'country_code'      => $countryValue,    
-                        'amount'            => $baseCurrencyAmount,
-                        'crypto_currency_amount' => $quoteCurrencyAmount,
+                        'amount'            => $fiatAmount,
+                        'cryptoAmount' => $cryptoAmount,
                         'provider_name'     => $provider_name,
                         'raw_data'          => maybe_serialize($_GET),
                         'user_agent'        => $_SERVER['HTTP_USER_AGENT'],
@@ -176,8 +176,8 @@ class TRANSAK_Front_Form_Shortcode {
                             'currency'          => $baseCurrencyCode,
                             'crypto_currency'   => $defaultCurrencyCode,
                             'country_code'      => $countryValue,    
-                            'amount'            => $baseCurrencyAmount,
-                            'crypto_currency_amount' => $quoteCurrencyAmount,
+                            'amount'            => $fiatAmount,
+                            'cryptoAmount' => $cryptoAmount,
                             'provider_name'     => $provider_name,
                             'payment_method'    => $paymentmethod,
                             'raw_data'          => maybe_serialize($_GET),
@@ -228,13 +228,12 @@ class TRANSAK_Front_Form_Shortcode {
                                                     'visa'      => 'credit_debit_card',
                                                     'mastercard' => 'credit_debit_card',
                                                     'applepay' => 'credit_debit_card'
-
-                                                );    
+                                                );
                     $data = array(
                         'apiKey'                    => TRANSAK_API_KEY,
-                        //'defaultFiatAmount'         => $baseCurrencyAmount,
-                        //'fiatCurrency'              => strtoupper($baseCurrencyCode),
-                        'defaultCryptoAmount' 		=> $quoteCurrencyAmount,
+                        'defaultFiatAmount'         => $fiatAmount,
+                        'fiatCurrency'              => strtoupper($baseCurrencyCode),
+                        'defaultCryptoAmount' 		=> $cryptoAmount,
 						'countryCode' 				=> $countryValue,
 						'defaultCryptoCurrency'     => strtoupper($defaultCurrencyCode),
                         'partnerOrderId'            => $externalTransactionId,

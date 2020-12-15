@@ -218,35 +218,35 @@ $phone_prefix_code = array(
     '263' => 'Zimbabwe (+263)',
 );
 
-return apply_filters( 'wcl_widget_text_settings', array(
+return apply_filters( 'gh_widget_text_settings', array(
     array(
-        'title'     => __( 'Button Text', 'wc-wcl' ),
-        'desc_tip'  => __( 'If you leave it blank than, trigger button shown as only icon.', 'wc-wcl' ),
-        'id'        => 'wcl_trigger_button_text',
+        'title'     => __( 'Button Text', 'wc-gh' ),
+        'desc_tip'  => __( 'If you leave it blank than, trigger button shown as only icon.', 'wc-gh' ),
+        'id'        => 'gh_trigger_button_text',
         'type'      => 'text',
         'class'     => 'regular-text',
     ),
 
 
     array(
-        'title'     => __( 'Country Code', 'wc-wcl' ),
-        'id'        => 'wcl_whatsapp_number_prefix_code',
+        'title'     => __( 'Country Code', 'wc-gh' ),
+        'id'        => 'gh_whatsapp_number_prefix_code',
         'type'      => 'select',
         'class'     => 'regular-text',
         'options'   => $phone_prefix_code,
     ),
 
     array(
-        'title'     => __( 'Mobile Number', 'wc-wcl' ),
-        'id'        => 'wcl_whatsapp_number',
+        'title'     => __( 'Mobile Number', 'wc-gh' ),
+        'id'        => 'gh_whatsapp_number',
         'type'      => 'number',
         'class'     => 'regular-text',
     ),
 
     array(
-        'title'     => __( 'Text Message', 'wc-wcl' ),
-        //'desc_tip'  => __( 'This will automatically append the following options along with user text.', 'wc-wcl' ),
-        'id'        => 'wcl_whatsapp_text',
+        'title'     => __( 'Text Message', 'wc-gh' ),
+        //'desc_tip'  => __( 'This will automatically append the following options along with user text.', 'wc-gh' ),
+        'id'        => 'gh_whatsapp_text',
         'type'      => 'textarea',
         'class'     => 'regular-text',
         'css'	    => 'height:120px',

@@ -1,0 +1,17 @@
+WhatsappLink plugin allows your end user to directly communicate with you using the WhatsApp button.
+This plugin support multiple option to change UI for the button.
+Some features of the WhatsappLink are listed below:
+	-Change Phone Number
+	-Fully Responsive
+	-Fully Customizable
+	-Custom Welcome Message
+	-Change Country Code
+	-Change the label of the WhatsApp Button
+	-Modify button by changing fontsize
+	-Change the position of the button
+	-Enable/Disable button for the desktop and mobile version
+	-Mobile version shows stripe button that make user to interact
+	-Remove label and show only icon
+	-Option to change the icon for whatsapp button
+	-Easy setting page
+	-Popup will set vertically center as per the screen size

@@ -83,7 +83,7 @@
     <div class="reload_page"><a href="<?php echo get_the_permalink() ?>" class="buy-now-button">Reload Page</a></div>
 <?php }?>
 
-<form class="transak-conversion-form <?php echo $error_form_class ?>" method="POST" action="<?php echo get_the_permalink($atts_value['redirect_to']); ?>">
+<form class="transak-conversion-form <?php echo $error_form_class ?>" method="GET" action="<?php echo get_the_permalink($atts_value['redirect_to']); ?>">
         <div class="transak-title-wrapper" id="buy-now-header-text-change">Buy Bitcoin ( BTC )</div>
         <input type="hidden" name="redirectURL" value="<?php echo get_the_permalink(); ?>">
         <div class="transak-conversion-form-inner">
@@ -96,22 +96,24 @@
                 </div>
 
                 <div class="transak-group transak-full">
-                    <label for="currency-amount-value">You Spend</label>
-                    <input type="number" name="currency-amount-value" required value="150" id="currency-amount-value" class="currency-amount-value" />
-                    <select name="currency-code-value" id="currency-code-value" class="select2 currency-code-value t-conversion">
+                    <label for="fiatAmount">You Spend</label>
+                    <input type="number" name="fiatAmount" required value="150" id="fiatAmount" class="fiatAmount" />
+                    <select name="fiatCurrency" id="fiatCurrency" class="select2 fiatCurrency t-conversion">
                         <?php echo $fiatOptions; ?>
                     </select>
                     <div id="cryptocurrency-error"></div>
                 </div>
     
                 <div class="transak-group transak-full transak-clear-both">
-                    <label for="cryptocurrency-amount-value">You Receive</label>
-                    <input type="text" readonly name="cryptocurrency-amount-value" id="cryptocurrency-amount-value" class="cryptocurrency-amount-value" />
-                    <select name="cryptocurrency-code-value" id="cryptocurrency-code-value"  class="select2 cryptocurrency-code-value t-conversion">
+                    <label for="cryptoAmount">You Receive</label>
+                    <input type="text" readonly name="cryptoAmount" id="cryptoAmount" class="cryptoAmount" />
+                    <select name="cryptoCurrency" id="cryptoCurrency"  class="select2 cryptoCurrency t-conversion">
                         <?php echo $cryptoOptions; ?>
                     </select>
                 </div>
-    
+                
+                <div id="transak_response"></div>
+                <input name='transak_buy_now' type='hidden' value='<?php echo wp_create_nonce('transak-buy-now'); ?>'>
                 <div class="transak-group transak-full transak-center">
                     <button type="submit" class="buy-now-button" id="buy-now-text-change">Buy Now</button>
                 </div>

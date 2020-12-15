@@ -37,7 +37,7 @@ class TRANSAK_Registration_Activation_Init {
                       `currency` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
                       `crypto_currency` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
                       `amount` float NOT NULL,
-                      `crypto_currency_amount` float NOT NULL,
+                      `cryptoAmount` float NOT NULL,
                       `provider_name` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
                       `raw_data` text COLLATE utf8mb4_unicode_ci NOT NULL,
                       `user_agent` varchar(512) COLLATE utf8mb4_unicode_ci NOT NULL,
