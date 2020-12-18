@@ -125,6 +125,5 @@ class Gh_Cf7_Insightly_Admin {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-gh-cf7-insightly-admin-mapping.php';
 		$this->gh_cf7_insightly_logs_obj = new GH_CF7_Insightly_Logs();
 		$this->gh_cf7_insightly_mappings_obj = new GH_CF7_Insightly_Mapping();
-
 	}
 }
