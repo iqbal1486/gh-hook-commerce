@@ -88,31 +88,44 @@
         <input type="hidden" name="redirectURL" value="<?php echo get_the_permalink(); ?>">
         <div class="transak-conversion-form-inner">
                 
-                <div class="transak-group transak-full right-side">
+                <div class="transak-group transak-full">
                     <label for="country-value">Country</label>
                     <select name="country-value" id="country-value" class="select2 country-value t-conversion">
                         <?php echo $countries; ?>
                     </select>
                 </div>
 
-                <div class="transak-group transak-full">
-                    <label for="fiatAmount">You Spend</label>
-                    <input type="number" name="fiatAmount" required value="150" id="fiatAmount" class="fiatAmount" />
-                    <select name="fiatCurrency" id="fiatCurrency" class="select2 fiatCurrency t-conversion">
-                        <?php echo $fiatOptions; ?>
-                    </select>
-                    <div id="cryptocurrency-error"></div>
-                </div>
-    
-                <div class="transak-group transak-full transak-clear-both">
-                    <label for="cryptoAmount">You Receive</label>
-                    <input type="text" readonly name="cryptoAmount" id="cryptoAmount" class="cryptoAmount" />
-                    <select name="cryptoCurrency" id="cryptoCurrency"  class="select2 cryptoCurrency t-conversion">
-                        <?php echo $cryptoOptions; ?>
-                    </select>
+                <div class="transak-group"> 
+                    <div class="transak-half">
+                        <label for="fiatAmount">You Spend</label>
+                        <input type="number" name="fiatAmount" required value="150" id="fiatAmount" class="fiatAmount" />
+                        <div id="cryptocurrency-error"></div>
+                    </div>
+                    <div class="transak-half">
+                        <label for="fiatCurrency">Select Fiat Currency</label>
+                        <select name="fiatCurrency" id="fiatCurrency" class="select2 fiatCurrency t-conversion">
+                            <?php echo $fiatOptions; ?>
+                        </select>
+                    </div>
                 </div>
                 
-                <div id="transak_response"></div>
+                <div class="transak-group">
+                    <div class="transak-half">
+                        <label for="cryptoAmount">You Receive</label>
+                        <input type="text" readonly name="cryptoAmount" id="cryptoAmount" class="cryptoAmount" />
+                    </div>
+                    <div class="transak-half">
+                        <label for="cryptoCurrency">Select Crypto Currency</label>
+                        <select name="cryptoCurrency" id="cryptoCurrency"  class="select2 cryptoCurrency t-conversion">
+                            <?php echo $cryptoOptions; ?>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="transak-group">
+                    <div id="transak_response"></div>
+                </div>
+
                 <input name='transak_buy_now' type='hidden' value='<?php echo wp_create_nonce('transak-buy-now'); ?>'>
                 <div class="transak-group transak-full transak-center">
                     <button type="submit" class="buy-now-button" id="buy-now-text-change">Buy Now</button>

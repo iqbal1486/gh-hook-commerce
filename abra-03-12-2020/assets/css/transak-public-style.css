@@ -6,205 +6,95 @@ transform: rotate(0deg);
 transform: rotate(360deg);
 }
 }
-.transak-conversion-form { background: rgb(247 250 255 / 0.70); padding: 20px; }
-.transak-conversion-form.blur { opacity: 0.2; filter: blur(5px); }
-.reload_page { position: relative; top: calc(25vh); z-index: 1; text-align: center; }
-.reload_page a { background: #6f2acd; border-radius: 50px; width: 14% !important; text-align: center; color: #fff; padding: 10px 20px; color: #fff; text-decoration: none; }
-#cryptocurrency-error { clear: both; }
-#cryptocurrency-error span#error_msg { clear: both; color: white !important; text-transform: uppercase; letter-spacing: 1px; text-align: center; padding: 5px 10px; margin: 6px 0px; font-size: 16px; border-radius: 0px; background-image: linear-gradient(to bottom, #fc507c, #fcac2b); width: fit-content; top: 5px; }
-.transak-conversion-form input[type="text"], .transak-conversion-form input[type="number"], .transak-conversion-form input[type="password"], .transak-conversion-form input[type="email"], .transak-conversion-form input[type="url"], .transak-conversion-form input[type="date"], .transak-conversion-form input[type="month"], .transak-conversion-form input[type="time"], .transak-conversion-form input[type="datetime"], .transak-conversion-form input[type="datetime-local"], .transak-conversion-form input[type="week"], .transak-conversion-form .transak-conversion-form input[type="number"], .transak-conversion-form input[type="search"], .transak-conversion-form input[type="tel"], .transak-conversion-form input[type="color"], .transak-conversion-form textarea, .transak-conversion-form select { background : #fff; border-radius: 0; border-style: solid; border-width: 0.1rem; box-shadow: none; display: block; font-size: 1.6rem; letter-spacing: -0.015em; margin: 0; max-width: 100%; /*padding: 1.5rem 1.8rem;*/ padding: 12px !important; width: 50% !important; float: left; }
-.transak-listing-form-inner input[type="text"], .transak-listing-form-inner input[type="number"], .transak-listing-form-inner input[type="password"], .transak-listing-form-inner input[type="email"], .transak-listing-form-inner input[type="url"], .transak-listing-form-inner input[type="date"], .transak-listing-form-inner input[type="month"], .transak-listing-form-inner input[type="time"], .transak-listing-form-inner input[type="datetime"], .transak-listing-form-inner input[type="datetime-local"], .transak-listing-form-inner input[type="week"], input[type="number"], .transak-listing-form-inner input[type="search"], .transak-listing-form-inner input[type="tel"], .transak-listing-form-inner input[type="color"], .transak-listing-form-inner textarea, .transak-listing-form-inner select { background : #fff; border-radius: 0; border-style: solid; border-width: 0.1rem; box-shadow: none; display: block; font-size: 1.6rem; letter-spacing: -0.015em; margin: 0; max-width: 100%; /*padding: 1.5rem 1.8rem;*/ padding: 12px !important; float: left; }
-.transak-center { text-align: center; }
-.transak-listing-one-fourth { width: 25%; padding: 0 10px; }
-.second-section { }
-.second-section select { }
-.second-section input { width: 60% !important; }
-.third-section { }
-.transak-full { width: 100%; clear: both; padding: 1% 3%; }
-.transak-half { width: 50%; float: left; padding: 1% 3%; }
-.transak-border { border: 2px solid #fff; margin: 10px -20px; }
-.transak-listing-wrapper { width: 100%; padding: 0px 20px; }
-.transak-listing-wrapper-left { width: 70%; float: left; }
-.transak-listing-wrapper-right { width: 100%; float: left; background: transparent; padding: 0 10%; box-sizing: border-box; border-radius: 0px;/*-webkit-box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.18); -moz-box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.18); box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.18);*/ }
-.transak-listing-form-left { width: 100%; display: flex; margin: 10px 0px 40px 0px; padding: 24px 15px; background: #eee; border-radius: 10px; flex-direction: row; -webkit-box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.18); -moz-box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.18); box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.18); }
-.transak-clear-both { clear: both; }
-.right-half-left { width: 25%; font-weight: bold; text-align: center; background: #fff; margin: 0px 0; }
-.right-half-center { width: 45%; padding: 5px; font-weight: bold; text-align: center; display: flex; align-items: center; flex-direction: column; justify-content: center; }
-.right-half-right { width: 30%; padding: 5px; text-align: center; margin-top: 10px; }
-#transak-listing-response { /*background: #C0C0C0;*/ /*display: flex;*/ }
-#transak-listing-response div.listing-single-block { background: #fff; margin: 5px 0px 35px 0px; width: 100%; height: 122.12px; border: 2px solid #fff; border-radius: 5px; -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.18); -moz-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.18); box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.18); flex-direction: row; justify-content: center; align-items: center; padding: 10px; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
-#transak-listing-response div.listing-single-block:hover { border: 2px solid #6F2ACD; }
-#transak-listing-response div.listing-single-block button { width: 130px; height: auto; background: #6d2acc; border-radius: 95px; padding: 8px 5px; font-style: normal; font-weight: bold; font-size: 15px; letter-spacing: 0.03em; text-transform: uppercase; color: #FFFFFF; }
-#transak-listing-response div.listing-single-block button:hover { text-decoration: none; }
+
+.transak-conversion-form { 
+	background: rgb(247 250 255 / 0.70); 
+	padding: 20px; 
+}
+
+.transak-conversion-form.blur { 
+	opacity: 0.2; 
+	filter: blur(5px); 
+}
+
+.reload_page { 
+	position: relative; 
+	top: calc(25vh); 
+	z-index: 1; 
+	text-align: center; 
+}
+
+.reload_page a { 
+	background: #6f2acd; 
+	border-radius: 50px; 
+	width: 14% !important; 
+	text-align: center; 
+	color: #fff; 
+	padding: 10px 20px; 
+	color: #fff; 
+	text-decoration: none; 
+}
+
+.transak-conversion-form input[type="text"], .transak-conversion-form input[type="number"], .transak-conversion-form input[type="password"], .transak-conversion-form input[type="email"], .transak-conversion-form input[type="url"], .transak-conversion-form input[type="date"], .transak-conversion-form input[type="month"], .transak-conversion-form input[type="time"], .transak-conversion-form input[type="datetime"], .transak-conversion-form input[type="datetime-local"], .transak-conversion-form input[type="week"], .transak-conversion-form .transak-conversion-form input[type="number"], .transak-conversion-form input[type="search"], .transak-conversion-form input[type="tel"], .transak-conversion-form input[type="color"], .transak-conversion-form textarea, .transak-conversion-form select { 
+	background : #fff; 
+	border-radius: 0; 
+	border-style: solid; 
+	border-width: 0.1rem; 
+	box-shadow: none; 
+	display: block; font-size: 1.6rem; 
+	letter-spacing: -0.015em; 
+	margin: 0; 
+	padding: 12px !important;  
+	width: 100%;
+	float: left; 
+}
+
 #listing-header-selected-currency { text-transform: uppercase; }
 .transak-conversion-form label, .transak-conversion-form legend, .transak-listing-form-inner label { font-weight: bold; color: #353535; font-size: 18px; }
-.transak-listing-form-inner label { font-family: Proxima Nova; font-style: normal; font-weight: normal; font-size: 14px; line-height: 16px; /* identical to box height */ color: #2B272A; display: block; margin-bottom: 10px }
-.transak-listing-form-inner label.payment-method { font-weight: normal; }
-.amount-block { font-family: Proxima Nova; font-style: normal; font-weight: 700; font-size: 20px; letter-spacing: 0.04em; color: #2b272a; line-height: 26px; }
-.estimate-block { font-family: Proxima Nova; font-style: normal; font-weight: normal; font-size: 13px; line-height: 18px; letter-spacing: 1px; text-transform: uppercase; color: #666; margin-top: 5px; }
-#transak-listing-response div.listing-single-block.off-price { position: relative; border: 2px solid #6F2ACD; }
-/*#transak-listing-response div.listing-single-block.off-price::before { position: absolute; content: "BEST OFFER"; top: -2px; left: -2px; font-size: 11px; font-weight: bold;
-letter-spacing: 0.5px; background: #6F2ACD; padding: 2px 6px; display: block; color: #fff; border-radius: 7px 0px 7px 0; } */
-#transak-listing-response div.listing-single-block.off-price .amount-block { color: #6F2ACD; }
-.provider { font-size: 16px; color: #353535; width: 100%; height: auto; padding: 5px; text-align: center; max-width: 115px; margin: auto; }
-.provider img { display: inline-block; max-width: 100%; }
-.left-inner-wrap .provider { margin-top: 15px; }
-div.payment-method-images { display: block; width: 100%; margin: 5px 0 0 0; text-align: center; height: 45px }
-.listing-single-block div.payment-method-images { width: 100%; }
-div.payment-method-images img { padding: 3px; display: inline-block; border: 1px solid #eee; height: 25px; width: 40px; margin: 8px 3px; background: #ddd; border-radius: 5px; }
-select[name='fiatCurrency'], select[name='cryptoCurrency'] { background: #ebe8eb; }
-button.buy-now-button { background: #6f2acd; border-radius: 50px; }
-.transak-title-wrapper { background: #fff; text-align: center; font-size: 30px; font-weight: bold; text-transform: uppercase; margin: -20px -20px 0px -20px; }
-button.buy-now-button:disabled { background: lightgray; cursor: not-allowed; }
-.transak-listing-one-fourth select, .transak-listing-one-fourth input { background: #FFFFFF; border: 0px !important; box-sizing: border-box; border-radius: 5px; font-size: 14px; font-family: arial }
-.transak-listing-one-fourth select#country-value, .transak-listing-one-fourth select#payment-method { }
 
-label.simplex_acceptance,
-label.moonpay_acceptance,
-label.banxa_acceptance,
-label.transak_acceptance
-{ display: inline-block; }
-
-
-button:disabled { background: #986dd2; }
-.listing-sidebar { text-align: center; }
-.listing-sidebar div.title { width: 100%; font-family: Proxima Nova; font-style: normal; font-weight: bold; font-size: 18px; line-height: 26px; letter-spacing: 0.03em; color: #2B272A; text-align: center; margin-bottom: 15px; }
-.listing-sidebar div.description { font-family: Proxima Nova; font-style: normal; font-weight: normal; font-size: 14px; line-height: 137.1%; /* or 19px */ letter-spacing: 0.03em; color: #000000; padding: 10px; }
-.listing-sidebar div.images a { display: block; width: 50%; float: left; padding: 5px; }
-.listing-sidebar div.images { padding-left: 10px; }
-
-.simplex_final_input_form,
-.moonpay_final_input_form,
-.banxa_final_input_form,
-.transak_final_input_form
- { width: 100%; display: flex; flex-direction: row; align-items: start; }
-
-.simplex_final_input_form .right-inner-outer,
-.moonpay_final_input_form .right-inner-outer,
-.banxa_final_input_form .right-inner-outer,
-.transak_final_input_form .right-inner-outer 
-{ background: #fff; padding: 20px; border-radius: 10px; -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.18); -moz-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.18); box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.18); text-align: center; }
-
-.simplex_final_input_form div.title,
-.moonpay_final_input_form div.title,
-.banxa_final_input_form div.title,
-.transak_final_input_form div.title 
-{ font-size: 18px; font-weight: bold; color: #000; margin: 5px 5px 2px 5px; display: block; clear: both; text-align: left; }
-
-.simplex_final_input_form div.description,
-.moonpay_final_input_form div.description,
-.banxa_final_input_form div.description,
-.transak_final_input_form div.description 
-{ margin: 0px 5px 5px 5px; font-size: 12px; display: block; color: #888; text-align: left; line-height: 16px; }
-
-.simplex_final_input_form form input.wallet_address,
-.moonpay_final_input_form form input.wallet_address,
-.banxa_final_input_form form input.wallet_address,
-.transak_final_input_form form input.wallet_address 
-{ font-size: 13px; width: 100% !important; height: 48px; float: left; border-radius: 5px; margin: 15px 0 10px 0; border: 1px solid #ddd !important; }
-
-.simplex_final_input_form form label.simplex_acceptance,
-.moonpay_final_input_form form label.moonpay_acceptance,
-.banxa_final_input_form form label.banxa_acceptance,
-.transak_final_input_form form label.transak_acceptance
- { width: 100% !important; margin: 0px; text-align: left; }
-
-.simplex_error_message,
-.moonpay_error_message,
-.banxa_error_message,
-.transak_error_message
-{ color: red; padding: 5px; display: none; }
-/*Custom css*/
-
-.field-wrap { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; width: 100%; }
-.field-wrap .dropbox-cus { margin-left: -1px; display: -webkit-box; display: -ms-flexbox; display: flex; }
-.field-wrap input[type="number"] { position: relative; -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; width: 1%; margin-bottom: 0; border: 0!important; border-radius: 5px 0 0 5px!important; }
-.field-wrap select { border: 0!important; background: #f5f5f5; position: relative; display: block; width: 78px !important; border-radius: 0 5px 5px 0!important }
-.field-wrap select:focus, select:focus, input[type="number"], input[type="text"] { border: 0!important; outline: none; }
-.transak-listing-header { border-top: 0px solid #eee; }
-body, .inner-wrap { font-family: Arial, Helvetica, sans-serif; font-size: 14px; }
-.inner-wrap { padding: 20px 0; }
-.p-title { font-size: 26px; color: #212145; display: block; margin-bottom: 30px; font-weight: bold; }
-input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
- -webkit-appearance: none!important;
- margin: 0!important;
+.transak-conversion-form  .transak-title-wrapper{
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
 }
-input[type=number] { -moz-appearance: textfield!important; }
-select { /* for Firefox */ -moz-appearance: none!important; /* for Safari, Chrome, Opera */ -webkit-appearance: none!important; }
-  
-      /* for IE10 */ 
-      .dropdown-container select::-ms-expand {
- display: none!important;
-}
-.dropbox-cus::after { position: absolute; content: ""; top: 45%; right: 14px; border-right: 5px solid transparent; border-left: 5px solid transparent; border-top: 5px solid #ddd; }
-.dropbox-cus { position: relative; }
-.w-100 { width: 100%!important; display: flex!important; }
-.transak-listing-header, .transak-listing-header span { font-family: arial; font-size: 16px; }
-.transak-listing-header { margin-bottom: 15px; display: block }
-.left-inner-wrap { float: left; width: 34.3%; background: #fff; padding: 20px; box-sizing: border-box; border-radius: 10px; -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.18); -moz-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.18); box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.18); margin-right: 30px; }
-.right-inner-wrap { float: left; width: 62%; }
-button.simplex_buy_now, 
-button.moonpay_buy_now,
-button.banxa_buy_now,
-button.transak_buy_now
-{ background: #6F2ACD; border-radius: 100px; width: 100% !important; display: inline-block; color: #fff; font-size: 14px!important; text-decoration: none!important; font-weight: normal!important; text-transform: uppercase; padding: 12px 10px!important; height: 44px!important; margin: 40px 15px 10px; }
-.spent { font-size: 16px; display: block; margin-bottom: 25px; }
-.response-error-message { font-size: 15px; padding: 0 15px; font-weight: normal; width: 100%; }
-.transak-listing-form-left.five_inputs .transak-group.transak-listing-one-fourth { width: 20%; }
-a.back-refresh { box-shadow: none !important; background: #eee; border-radius: 100px; width: 115px !important; display: inline-block; color: #777; font-size: 14px; text-decoration: none; font-weight: 600 !important; text-transform: capitalize; padding: 10px 10px 10px 24px !important; margin-bottom: 15px; position: relative; text-align: center; }
-a.back-refresh::before { position: absolute; left: 32px; content: "<"; font-family: Arial; font-size: 16px; color: #777; top: 9px; }
-.final-button-span { display: inline-block; width: 180px; margin: 0 15px }
-.back-refresh-span { display: inline-block; margin: 0; }
-.simplex_acceptance_text a, 
-.moonpay_acceptance_text a,
-.banxa_acceptance_text a,
-.transak_acceptance_text a 
-{ color: #a97ce6; }
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-.transak-listing-form-right { margin-top: 30px; }
-.transak-listing-wrapper-right { margin-top: 40px!important; }
-.transak-listing-form-left.five_inputs .transak-group.transak-listing-one-fourth.first-section { width: 30% !important; }
-}
- @media (min-width: 1024px) {
-.leftwrap { float: left; width: 70%; padding-right: 15px; }
-.rightwrap { float: left; width: 30%; padding-left: 15px; }
-.transak-listing-wrapper-right { border-left: 1px solid #ddd; }
-#transak-listing-response .custom-row { display: flex; flex-direction: row; justify-content: left; flex-flow: wrap; margin: 0 -15px; }
-#transak-listing-response .custom-row .listing-single-block { width: 29% !important; height: auto !important; margin: 0 15px 30px !important; }
-#transak-listing-response .custom-row .listing-single-block .right-half-center, .custom-row .listing-single-block .right-half-left, #transak-listing-response .custom-row .listing-single-block .right-half-right { width: 100%; }
-#transak-listing-response .custom-row .listing-single-block .right-half-left { margin: 12px 0 5px; }
-}
-@media (max-width: 767px) {
-.provider { text-align: left; margin: 0; max-width: 170px; }
-.right-half-left { width: 35%; border-right: 0px solid #ddd; }
-.simplex_final_input_form, 
-.moonpay_final_input_form,
-.banxa_final_input_form,
-.transak_final_input_form 
-{ flex-direction: column; align-items: start; }
-.right-inner-wrap { margin-bottom: 30px; }
-#transak-listing-response div.listing-single-block { height: auto; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
-.right-half-center { text-align: left; align-items: flex-start!important; flex-direction: column!important; justify-content: flex-start; width: 100%; }
-.right-half-right { width: 100%!important; text-align: left!important; }
-div.payment-method-images { width: 100%; text-align: left; }
-.response-error-message { padding: 0; }
-.transak-listing-form-left.five_inputs .transak-group.transak-listing-one-fourth, .transak-listing-form-left .transak-listing-one-fourth { width: 100%; margin-bottom: 15px; }
-.transak-listing-form-left { flex-direction: column; }
 
-.simplex_final_input_form, 
-.moonpay_final_input_form,
-.banxa_final_input_form 
-.transak_final_input_form 
-{ flex-direction: column-reverse!important; }
-
-.left-inner-wrap, .right-inner-wrap { width: 100%!important; }
-.left-inner-wrap { margin-bottom: 30px!important; ; }
+.transak-conversion-form div.transak-group{
+	clear: both;
 }
-/*Momin CSS*/
-.transak-conversion-form div.payment-method-images { display: block; text-align: center; height: 40px; margin: 5px; }
-.transak-conversion-form div.payment-method-images img { padding: 2px; display: inline-block; border: none; height: auto; width: auto; margin: inherit; background: none; border-radius: 0px; }
-/*Momin CSS END*/
 
- @media (max-width: 1024px) {
-.listing-sidebar { max-width: 370px!important; margin: auto!important; }
+.transak-conversion-form div.transak-full{
+	width: 100%;
+	padding: 10px;
+}
+
+.transak-conversion-form div.transak-half{
+	width: 50%;
+	padding: 10px;
+	float: left;
+}
+
+.transak-conversion-form .title {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 0px;
+}
+
+.trnsak-response-html {
+	border: 1px solid;
+    padding: 10px;
+    margin: 10px;
+}
+
+.transak-conversion-form .description {
+    font-size: small;
+    padding: 10px 0px;
+}
+
+span.transak_error_message {
+    padding: 10px 0px;
+}
+
+label.transak_acceptance{
+	clear: both;
+    padding: 10px 0px;
 }

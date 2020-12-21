@@ -1,7 +1,7 @@
 <?php
 /*
 * Plugin Name: Crypto Transak Aggregrator
-* Description: Abra Buy Sell Crypto currency using Transak
+* Description: Buy Crypto currency using Transak
 * Plugin URI:  https://www.test.com/
 * Author:      Test Here
 * Author URI:  https://www.test.com/
@@ -203,7 +203,7 @@ $get_payment_method_label  = array(
    
 // Load plugin with plugins_load
 function transak_init() {
-    global $wpdb, $table_prefix, $get_fiat_currencies, $get_crypto_currencies, $get_list_countries, $get_payment_method;
+    global $wpdb, $table_prefix, $get_fiat_currencies, $get_crypto_currencies, $get_list_countries;
     $get_list_countries = $wpdb->get_results( "SELECT * FROM ".TRANSAK_TABLE_COUNTRIES_LIST." ORDER BY `country_name`", ARRAY_A);
     $get_fiat_currencies = $wpdb->get_results( "SELECT * FROM ".TRANSAK_TABLE_FIAT_CURRENCIES." ORDER BY `iso_code`", ARRAY_A);
     $get_crypto_currencies = $wpdb->get_results( "SELECT * FROM ".TRANSAK_TABLE_CRYPTO_CURRENCIES." ORDER BY `ticker_symbol`", ARRAY_A);

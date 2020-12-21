@@ -66,25 +66,13 @@ var conversion_callback = function(){
 
 
 jQuery(document).ready(function(e){
-	
 	/*Conversion Form Callback Functions*/	
 	conversion_callback();
-
 	jQuery('body').on("keyup", ".fiatAmount", function(){
 	    conversion_callback()
   	});
 
   	jQuery('body').on("change", ".t-conversion", function(){
-  		/*
-  		if(jQuery(this).find(':selected').attr('data-currency')){
-	    	jQuery("#fiatCurrency").val(jQuery(this).find(':selected').attr('data-currency'));
-	    	if (!jQuery("#fiatCurrency option:selected").length) {
-	    		jQuery("#fiatCurrency").val('usd');
-			}
-	    }
-	    */
 	    conversion_callback()
   	});
-  //jQuery('body').on('change', '#expected_number_of_guests', budget_calc_callback);
-
 });

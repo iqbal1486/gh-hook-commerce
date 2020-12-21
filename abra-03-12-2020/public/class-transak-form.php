@@ -9,121 +9,17 @@ class TRANSAK_Front_Form_Shortcode {
        
        /*This is disable now*/
         add_action( 'init', array( $this, 'moonpay_insert_update_callback_from_listing_page' ) );
-       // add_action( 'init', array( $this, 'moonpay_insert_update_redirect_callback_from_main_form' ) );
         add_shortcode( 'transak_conversion_form', array( $this, 'display_front_form_callback' ) );
-    }
-
-    public function moonpay_insert_update_redirect_callback_from_main_form(){
-        if(isset($_POST['fiatAmount']) && !empty($_POST['fiatAmount'])) {
-                global $table_prefix, $wpdb;
-
-                $timestamp               = time();  
-                $externalCustomerId      = $timestamp.'.'.rand();
-                $externalTransactionId   = 'eti_'.$timestamp.'_aggregator';
-
-                $fiatAmount     = $_POST['fiatAmount'];
-                $cryptoAmount    = $_POST['cryptoAmount'];
-
-                $baseCurrencyCode       = $_POST['fiatCurrency'];
-                $defaultCurrencyCode    = $_POST['cryptoCurrency'];
-                $countryValue           = $_POST['country-value'];
-
-                $extraFeeAmount         = $_POST['extraFeeAmount'];
-                $feeAmount              = $_POST['feeAmount'];
-                
-                $provider_name          = 'moonpay';
-                $ip                     = "";
-
-                if (!empty($_SERVER['HTTP_CLIENT_IP']))   //check ip from share internet
-                {
-                  $ip = $_SERVER['HTTP_CLIENT_IP'];
-                }
-                elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))   //to check ip is pass from proxy
-                {
-                  $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-                }
-                else
-                {
-                  $ip = $_SERVER['REMOTE_ADDR'];
-                }    
-
-                $existing_record = $wpdb->get_row( "SELECT * FROM {$wpdb->prefix}transak_transaction WHERE transaction_id = '".$externalTransactionId."'", ARRAY_A );
-                
-                if ( null == $existing_record ) {
-                    
-                    $wpdb->insert("{$wpdb->prefix}transak_transaction", array(
-                        'customer_id'       => $externalCustomerId,
-                        'transaction_id'    => $externalTransactionId,
-                        'currency'          => $baseCurrencyCode,
-                        'crypto_currency'   => $defaultCurrencyCode,
-                        'country_code'      => $countryValue,    
-                        'amount'            => $fiatAmount,
-                        'cryptoAmount' => $cryptoAmount,
-                        'provider_name'     => $provider_name,
-                        'raw_data'          => maybe_serialize($_POST),
-                        'user_agent'        => $_SERVER['HTTP_USER_AGENT'],
-                        'ip_address'        => $ip,
-                    ));
-                    
-                }else{
-                    
-
-                    /*Update Query*/
-                    $wpdb->update( 
-                        "{$wpdb->prefix}transak_transaction", 
-                        array( 
-                            'currency'          => $baseCurrencyCode,
-                            'crypto_currency'   => $defaultCurrencyCode,
-                            'country_code'      => $countryValue,    
-                            'amount'            => $fiatAmount,
-                            'cryptoAmount' => $cryptoAmount,
-                            'provider_name'     => $provider_name,
-                            'raw_data'          => maybe_serialize($_POST),
-                            'user_agent'        => $_SERVER['HTTP_USER_AGENT'],
-                            'ip_address'        => $ip,
-                        ), 
-                        array( 'transaction_id' => $externalTransactionId ), 
-                        array( 
-                            '%s',
-                            '%s',
-                            '%s',
-                            '%s',
-                            '%s',
-                            '%s',
-                            '%s',
-                            '%s',
-                            '%s'
-                        ), 
-                        array( '%s' ) 
-                    );    
-
-                }
-
-                $data = array(
-                    'fiatAmount'    => $fiatAmount,
-                    'baseCurrencyCode'      => $baseCurrencyCode,
-                    'defaultCurrencyCode'   => $defaultCurrencyCode,
-                    'externalCustomerId'    => $externalCustomerId,
-                    'externalTransactionId' => $externalTransactionId,
-                    'extraFeeAmount'        => $extraFeeAmount,
-                    'feeAmount'             => $feeAmount,
-                    'redirectURL'           => $_POST['redirectURL'],
-                    'apiKey'                => TRANSAK_API_KEY
-                );
-
-                wp_redirect(MOONPAY_THIRD_PARTY_PAGE.'?'.http_build_query($data) . "\n");
-                exit();
-        }    
     }
 
     public function moonpay_insert_update_callback_from_listing_page(){
         if(isset($_GET['externalTransactionId']) && wp_verify_nonce($_GET['transak_buy_now'], 'transak-buy-now')) {
-               global $table_prefix, $wpdb;
+                global $table_prefix, $wpdb;
 
                 $externalTransactionId  = $_GET['externalTransactionId'];
                 $externalCustomerId     = $_GET['externalCustomerId'];
-                $fiatAmount     = $_GET['fiatAmount'];
-                $cryptoAmount    = $_GET['cryptoAmount'];
+                $fiatAmount             = $_GET['fiatAmount'];
+                $cryptoAmount           = $_GET['cryptoAmount'];
 
                 $baseCurrencyCode       = $_GET['baseCurrencyCode'];
                 $defaultCurrencyCode    = $_GET['defaultCurrencyCode'];
@@ -145,7 +41,7 @@ class TRANSAK_Front_Form_Shortcode {
                 {
                   $ip = $_SERVER['REMOTE_ADDR'];
                 }    
-
+                
                 $existing_record = $wpdb->get_row( "SELECT * FROM {$wpdb->prefix}transak_transaction WHERE transaction_id = '".$externalTransactionId."'", ARRAY_A );
                 
                 if ( null == $existing_record ) {
@@ -157,7 +53,7 @@ class TRANSAK_Front_Form_Shortcode {
                         'crypto_currency'   => $defaultCurrencyCode,
                         'country_code'      => $countryValue,    
                         'amount'            => $fiatAmount,
-                        'cryptoAmount' => $cryptoAmount,
+                        'cryptoAmount'      => $cryptoAmount,
                         'provider_name'     => $provider_name,
                         'raw_data'          => maybe_serialize($_GET),
                         'user_agent'        => $_SERVER['HTTP_USER_AGENT'],
@@ -177,7 +73,7 @@ class TRANSAK_Front_Form_Shortcode {
                             'crypto_currency'   => $defaultCurrencyCode,
                             'country_code'      => $countryValue,    
                             'amount'            => $fiatAmount,
-                            'cryptoAmount' => $cryptoAmount,
+                            'cryptoAmount'      => $cryptoAmount,
                             'provider_name'     => $provider_name,
                             'payment_method'    => $paymentmethod,
                             'raw_data'          => maybe_serialize($_GET),
@@ -201,6 +97,21 @@ class TRANSAK_Front_Form_Shortcode {
                     );    
 
                 }
+
+                echo "df";
+                echo "<pre>";
+                // Print last SQL query string
+echo $wpdb->last_query;
+
+// Print last SQL query result
+echo $wpdb->last_result;
+
+// Print last SQL query Error
+echo $wpdb->last_error;
+                print_r($_GET);
+                echo "</pre>";
+                exit();
+
                 if($provider_name == "transak"){
 
                     $walletAddress = $_GET['transak_wallet_address'];
@@ -227,7 +138,7 @@ class TRANSAK_Front_Form_Shortcode {
                                                     'fasterPay' => 'gbp_bank_transfer',
                                                     'visa'      => 'credit_debit_card',
                                                     'mastercard' => 'credit_debit_card',
-                                                    'applepay' => 'credit_debit_card'
+                                                    'applepay'  => 'credit_debit_card'
                                                 );
                     $data = array(
                         'apiKey'                    => TRANSAK_API_KEY,
@@ -240,7 +151,6 @@ class TRANSAK_Front_Form_Shortcode {
                         'partnerCustomerId'         => $externalCustomerId,
                         'walletAddress'             => $walletAddress,
                         'redirectURL'               => get_the_permalink(TRANSAK_REDIRECT_URL),
-                        //'hostURL'                   => get_the_permalink(TRANSAK_REDIRECT_URL)
                     );
 
                     /*passing slug of payment method in transak*/    
@@ -250,12 +160,7 @@ class TRANSAK_Front_Form_Shortcode {
 
                     wp_redirect(TRANSAK_THIRD_PARTY_PAGE.'?'.http_build_query($data) . "\n");
                     exit();
-                    /*
-                    https://staging-global.transak.com/?apiKey=ae882203-9b59-4206-a48f-1bedcc22c753&hostURL=http://transak.demansol.tech/&defaultCryptoCurrency=ETH&defaultFiatAmount=500&fiatCurrency=USD
-                    */
-
                 }
-                
         }
     }
 

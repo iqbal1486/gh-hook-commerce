@@ -14,13 +14,10 @@ class TRANSAK_Enqueue_Scripts {
 
     public function public_enqueue_scripts() {
 
-        
-        
-        wp_enqueue_script( 'transak-public-script', TRANSAK_PLUGIN_URL . '/assets/js/transak-public-script.js', array('jquery'), TRANSAK_PLUGIN_VER.rand() );
         wp_register_script( 'transak-front-form-script', TRANSAK_PLUGIN_URL . '/assets/js/transak-front-form-script.js', array('jquery'), TRANSAK_PLUGIN_VER.rand() );
         wp_register_script( 'wallet-address-validator-min', TRANSAK_PLUGIN_URL . '/assets/js/wallet-address-validator.min.js', array('jquery'), TRANSAK_PLUGIN_VER.rand() );
                 
-        wp_localize_script( 'transak-public-script', 'transakObj', array(
+        wp_localize_script( 'transak-front-form-script', 'transakObj', array(
             'plugin_url'            => esc_url( TRANSAK_PLUGIN_URL ),
             'is_mobile'             => ( wp_is_mobile() ) ? '1' : '0',
             'current_page_id'       => get_the_ID(),

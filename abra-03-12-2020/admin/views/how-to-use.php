@@ -12,8 +12,6 @@
 		<td>
 			<p class="description" id="tagline-description">Update the API keys in Basic settings</p>
 			<p class="description" id="tagline-description">Select Moonpay payment page from the dropdown in Basic settings</p>
-			<p class="description" id="tagline-description">When going live, select Live checkbox from the Basic settings</p>
-			<p class="description" id="tagline-description">You can check the Transaction from the Abra Transactions menu</p>
 		</td>
 	</tr>
 

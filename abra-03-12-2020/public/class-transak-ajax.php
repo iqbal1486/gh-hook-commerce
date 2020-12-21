@@ -40,7 +40,7 @@ class TRANSAK_AjaxCall
         $transak_country_supported = $this->check_integration_support($get_list_countries, "transak_supported", "yes", "alpha2", $countryValue);
 
             /*on success*/
-            $html .= "<div class='right-inner-outer'>";
+            $html .= "<div class='trnsak-response-html'>";
             $html .= "<div class='title'>Enter your " . strtoupper($cryptocurrencyCodeValue) . " wallet address</div>";
             $html .= "<div class='description'>Our provider will send money to this address after you complete payment</div>";
 
@@ -52,20 +52,20 @@ class TRANSAK_AjaxCall
             {
                 foreach ($query_params as $key => $value)
                 {
-                    $html .= "<input name='" . $key . "' type='hiddenf' value='" . $value . "'>";
+                    $html .= "<input name='" . $key . "' type='hidden' value='" . $value . "'>";
                 }
             }
 
-            $html .= "<input name='fiatAmount' type='hiddenf' value='" . $currencyAmountValue . "'>";
-            $html .= "<input name='cryptoAmount' type='hiddenf' value='" . $cryptoAmount . "'>";
-            $html .= "<input name='baseCurrencyCode' type='hiddenf' value='" . $currencyCodeValue . "'>";
-            $html .= "<input name='defaultCurrencyCode' type='hiddenf' value='" . $cryptocurrencyCodeValue . "'>";
-            $html .= "<input name='externalCustomerId' type='hiddenf' value='" . $externalCustomerId . "'>";
-            $html .= "<input name='externalTransactionId' type='hiddenf' value='" . $quoteId . "'>";
-            $html .= "<input name='countryValue' type='hiddenf' value='" . $countryValue . "'>";
-            $html .= "<input name='quoteid' type='hiddenf' value='" . $quoteId . "'>";
-            $html .= "<input name='paymentmethod' type='hiddenf' value='" . $paymentmethod . "'>";
-            $html .= "<input name='provider_name' type='hiddenf' value='transak'>";
+            $html .= "<input name='fiatAmount' type='hidden' value='" . $currencyAmountValue . "'>";
+            $html .= "<input name='cryptoAmount' type='hidden' value='" . $cryptoAmount . "'>";
+            $html .= "<input name='baseCurrencyCode' type='hidden' value='" . $currencyCodeValue . "'>";
+            $html .= "<input name='defaultCurrencyCode' type='hidden' value='" . $cryptocurrencyCodeValue . "'>";
+            $html .= "<input name='externalCustomerId' type='hidden' value='" . $externalCustomerId . "'>";
+            $html .= "<input name='externalTransactionId' type='hidden' value='" . $quoteId . "'>";
+            $html .= "<input name='countryValue' type='hidden' value='" . $countryValue . "'>";
+            $html .= "<input name='quoteid' type='hidden' value='" . $quoteId . "'>";
+            $html .= "<input name='paymentmethod' type='hidden' value='" . $paymentmethod . "'>";
+            $html .= "<input name='provider_name' type='hidden' value='transak'>";
 
             $html .= "<input name='transak_wallet_address' class='wallet_address' placeholder='Enter your " . strtoupper($cryptocurrencyCodeValue) . " recipient address' required type='text' value=''>";
 
