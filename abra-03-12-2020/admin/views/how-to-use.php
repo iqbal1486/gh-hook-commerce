@@ -1,21 +1,2 @@
-<table class="form-table" role="presentation">
-	<tr>
-		<th>Conversion Form Shortcode</th>
-		<td>[transak_conversion_form] 
-			<p class="description" id="tagline-description">page_id  must be replaced with the actual page id of listing page. This is the id where the form will get redirected</p>
-		</td>
-	</tr>
-
-	
-	<tr>
-		<th>Other Instructions</th>
-		<td>
-			<p class="description" id="tagline-description">Update the API keys in Basic settings</p>
-			<p class="description" id="tagline-description">Select Moonpay payment page from the dropdown in Basic settings</p>
-		</td>
-	</tr>
-
-</table>
-
-
-
+<div>paste this shortcode <b>[transak_conversion_form]</b> in any page where you would like to show the conversion page</div>
+<div>Update SITE_URL/wp-json/transak/v1/response as a webhook url. So when order is placed through your website, webhook will be trigger from transak and the response is stored in trnasaction in WordPress</div>

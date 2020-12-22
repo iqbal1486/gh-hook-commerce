@@ -98,20 +98,6 @@ class TRANSAK_Front_Form_Shortcode {
 
                 }
 
-                echo "df";
-                echo "<pre>";
-                // Print last SQL query string
-echo $wpdb->last_query;
-
-// Print last SQL query result
-echo $wpdb->last_result;
-
-// Print last SQL query Error
-echo $wpdb->last_error;
-                print_r($_GET);
-                echo "</pre>";
-                exit();
-
                 if($provider_name == "transak"){
 
                     $walletAddress = $_GET['transak_wallet_address'];

@@ -161,6 +161,8 @@ class Gh_Cf7_Insightly {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$this->loader->add_action( 'admin_init', $plugin_admin, 'edit_update_basic_options' );
+		$this->loader->add_action( 'admin_init', $plugin_admin, 'edit_update_mapping' );
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'register_sub_menu' );
 
 	}

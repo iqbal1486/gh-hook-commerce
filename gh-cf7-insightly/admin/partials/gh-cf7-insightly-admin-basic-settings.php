@@ -26,19 +26,7 @@
 					<th scope="row"><label for="new_admin_email">API KEY</label></th>
 					<td>
 						<input name="gh_cf7_insightly_api_key" id="gh_cf7_insightly_api_key" type="text" value="<?php echo $gh_cf7_insightly_options['gh_cf7_insightly_api_key']; ?>"  class="regular-text ltr">
-						<p class="description" id="new-admin-email-description">API KEY <strong>Get it from here.</strong></p>
-					</td>
-				</tr>
-
-				<tr valign="top">
-					<th scope="row">
-						<label for="">Request Setup Help</label>
-					</th>
-					<td>
-						<div>Facing Difficulty? Click to connect with us</div>
-						<div>
-							<button type="submit" name="gh_request_setup_help" class="gh-request-help" value="gh_request_setup_help">Request Help</button>
-						</div>
+						<p class="description" id="new-admin-email-description">API KEY from insightly</p>
 					</td>
 				</tr>
 

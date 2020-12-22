@@ -73,8 +73,7 @@ class TRANSAK_Admin_Init {
             'manage_options',
             'transak-settings',
             array( $this, 'admin_setting_page' ),
-            //'dashicons-money-alt',
-            TRANSAK_PLUGIN_URL.'assets/images/transak-logo-white.ico',
+            'dashicons-money-alt',
             NULL
         );
 

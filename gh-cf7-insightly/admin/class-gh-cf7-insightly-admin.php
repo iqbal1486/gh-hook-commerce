@@ -100,6 +100,42 @@ class Gh_Cf7_Insightly_Admin {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/gh-cf7-insightly-admin.js', array( 'jquery' ), $this->version, false );
 	}
 
+	public function edit_update_mapping(){
+		if ( ! is_admin() || ! isset( $_POST['save_gh_cf7_insightly_mapping'] )  || !wp_verify_nonce($_REQUEST['gh_cf7_insightly_save_mapping_nonce_field'], 'gh_cf7_insightly_save_mapping_nonce')) {
+            return;
+        }
+
+        $post_data               = stripslashes_deep( $_POST );
+        echo "<pre style='margin-left:250px'>";
+        print_r($post_data);
+        echo "</pre>";
+
+
+        $mapping_settings  = array(
+						'gh_enable_widget_on_cart' => isset($post_data['gh_enable_widget_on_cart']) ? $post_data['gh_enable_widget_on_cart'] : '0',
+						'gh_cf7_insightly_api_key' => isset($post_data['gh_cf7_insightly_api_key']) ? $post_data['gh_cf7_insightly_api_key'] : '',
+			        );
+
+        //update_option( 'gh_cf7_insightly_mapping', $mapping_settings );
+
+	}
+
+	public function edit_update_basic_options(){
+		if ( ! is_admin() || ! isset( $_POST['save_gh_cf7_insightly_options'] )  || !wp_verify_nonce($_REQUEST['gh_cf7_insightly_options_nonce_field'], 'gh_cf7_insightly_options_nonce')) {
+            return;
+        }
+
+        $post_data               = stripslashes_deep( $_POST );
+
+        $basic_settings  = array(
+						'gh_enable_widget_on_cart' => isset($post_data['gh_enable_widget_on_cart']) ? $post_data['gh_enable_widget_on_cart'] : '0',
+						'gh_cf7_insightly_api_key' => isset($post_data['gh_cf7_insightly_api_key']) ? $post_data['gh_cf7_insightly_api_key'] : '',
+			        );
+
+        update_option( 'gh_cf7_insightly_options', $basic_settings );
+
+	}
+
 	public function register_sub_menu(){
 		add_menu_page('GH CF7 to Insighlty', 'GH CF7 to Insighlty', 'manage_options', 'gh-cf-insightly');
 		$hook = add_submenu_page(
