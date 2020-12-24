@@ -31,7 +31,7 @@ class Gh_Cf7_Insightly_Activator {
 	 */
 	public static function activate() {
 		global $wpdb; 
-		$db_table_name = $wpdb->prefix . 'gh_cf7_insightly_mapping';  // table name
+		$db_table_name = GH_CF7_INSIGHTLY_TABLE_MAPPING;
 		$charset_collate = $wpdb->get_charset_collate();
 
 		//Check to see if the table exists already, if not, then create it
@@ -41,7 +41,8 @@ class Gh_Cf7_Insightly_Activator {
 		            id int(11) NOT NULL auto_increment,
 		            form_ID int(11) NOT NULL,
 		            mapping text NOT NULL,
-		            UNIQUE KEY id (id)
+		            UNIQUE KEY id (id),
+		            UNIQUE KEY form_ID (form_ID)
 		    ) $charset_collate;";
 
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );

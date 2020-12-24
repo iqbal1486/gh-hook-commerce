@@ -30,6 +30,8 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+global $wpdb;
+
 /**
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org
@@ -37,6 +39,13 @@ if ( ! defined( 'WPINC' ) ) {
  */
 define( 'GH_CF7_INSIGHTLY_VERSION', '1.0.0' );
 
+if ( ! defined( 'GH_CF7_INSIGHTLY_TABLE_MAPPING' ) ) {
+    define( 'GH_CF7_INSIGHTLY_TABLE_MAPPING', $wpdb->prefix . 'gh_cf7_insightly_mapping' );
+}
+
+if ( ! defined( 'GH_CF7_INSIGHTLY_MAPPING_URL' ) ) {
+    define( 'GH_CF7_INSIGHTLY_MAPPING_URL', get_admin_url().'admin.php?page=gh-cf-insightly&tab=mapping' );
+}
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-gh-cf7-insightly-activator.php

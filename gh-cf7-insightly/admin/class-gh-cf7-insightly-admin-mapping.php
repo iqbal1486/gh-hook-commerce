@@ -29,7 +29,7 @@ class GH_CF7_Insightly_Mapping extends WP_List_Table {
 
 		global $wpdb;
 
-		$sql = "SELECT * FROM {$wpdb->prefix}gh_cf7_insightly_mappings";
+		$sql = "SELECT * FROM ".GH_CF7_INSIGHTLY_TABLE_MAPPING;
 
 		if ( ! empty( $_REQUEST['orderby'] ) ) {
 			$sql .= ' ORDER BY ' . esc_sql( $_REQUEST['orderby'] );
@@ -55,7 +55,7 @@ class GH_CF7_Insightly_Mapping extends WP_List_Table {
 		global $wpdb;
 
 		$wpdb->delete(
-			"{$wpdb->prefix}gh_cf7_insightly_mappings",
+			"".GH_CF7_INSIGHTLY_TABLE_MAPPING,
 			[ 'id' => $id ],
 			[ '%d' ]
 		);
@@ -70,7 +70,7 @@ class GH_CF7_Insightly_Mapping extends WP_List_Table {
 	public static function record_count() {
 		global $wpdb;
 
-		$sql = "SELECT COUNT(*) FROM {$wpdb->prefix}gh_cf7_insightly_mappings";
+		$sql = "SELECT COUNT(*) FROM ".GH_CF7_INSIGHTLY_TABLE_MAPPING;
 
 		return $wpdb->get_var( $sql );
 	}
@@ -92,9 +92,47 @@ class GH_CF7_Insightly_Mapping extends WP_List_Table {
 	 */
 	public function column_default( $item, $column_name ) {
 		switch ( $column_name ) {
-			case 'response_message':
-			case 'city':
+			case 'form_ID':
+			case 'module_name':
 				return $item[ $column_name ];
+			case 'mapping':
+				if($item[ $column_name ]){
+					$mapping_data = unserialize($item[ $column_name ]);
+					$mapping_loop = "";
+					foreach ($mapping_data as $key => $value) {
+						if( !empty($value) ){
+							$mapping_loop .= '<tr>
+							    <td>'.$key.'</td>
+							    <td>'.$value.'</td>
+							</tr>';	
+						}
+					}
+				}
+				$html = '<style>
+					table.inner-table {
+					  font-family: arial, sans-serif;
+					  border-collapse: collapse;
+					  width: 100%;
+					}
+
+					table.inner-table td, table.inner-table th {
+					  border: 1px solid #dddddd;
+					  text-align: left;
+					  padding: 8px;
+					}
+
+					table.inner-table tr:nth-child(even) {
+					  background-color: #dddddd;
+					}
+				</style>
+				<table class="inner-table">
+				  <tr>
+				    <th><b>Insightly Fields</b></th>
+				    <th><b>Contact Fields</b></th>
+				  </tr>
+				  '.$mapping_loop.'
+				</table>';
+				return $html;
 			default:
 				return print_r( $item, true ); //Show the whole array for troubleshooting purposes
 		}
@@ -121,16 +159,16 @@ class GH_CF7_Insightly_Mapping extends WP_List_Table {
 	 *
 	 * @return string
 	 */
-	function column_response_code( $item ) {
+	function column_form_ID( $item ) {
 
 		$delete_nonce = wp_create_nonce( 'sp_delete_mappings' );
-		$edit_nonce = wp_create_nonce( 'sp_edit_mappings' );
+		$edit_nonce = wp_create_nonce( 'gh_cf7_insightly_add_new_mapping_nonce' );
 
-		$title = '<strong>' . $item['response_code'] . '</strong>';
+		$title = '<strong>' . $item['form_ID'] . '</strong>';
 
 		$actions = [
-			'delete' => sprintf( '<a href="?page=%s&tab=mappings&action=%s&mappings=%s&_wpnonce=%s">Delete</a>', esc_attr( $_REQUEST['page'] ), 'delete', absint( $item['id'] ), $delete_nonce ),
-			'edit' => sprintf( '<a href="?page=%s&tab=mappings&action=%s&mappings=%s&_wpnonce=%s">Edit</a>', esc_attr( $_REQUEST['page'] ), 'delete', absint( $item['id'] ), $delete_nonce )
+			'delete' => sprintf( '<a href="?page=%s&tab=mapping&action=%s&mapping_id=%s&_wpnonce=%s">Delete</a>', esc_attr( $_REQUEST['page'] ), 'delete', absint( $item['id'] ), $delete_nonce ),
+			'edit' => sprintf( '<a href="?page=%s&tab=mapping&action=%s&module_name=%s&form_id=%s&gh_cf7_insightly_add_new_mapping_nonce_field=%s">Edit</a>', esc_attr( $_REQUEST['page'] ), 'edit', $item['module_name'] , absint( $item['form_ID'] ), $edit_nonce )
 		];
 
 		return $title . $this->row_actions( $actions );
@@ -144,10 +182,11 @@ class GH_CF7_Insightly_Mapping extends WP_List_Table {
 	 */
 	function get_columns() {
 		$columns = [
-			'cb'      			=> '<input type="checkbox" />',
-			'response_code'    	=> __( 'Response Code', 'gh-cf7-insightly' ),
-			'response_message' 	=> __( 'Response Message', 'gh-cf7-insightly' ),
-			'city'    			=> __( 'City', 'gh-cf7-insightly' )
+			'cb'      		=> '<input type="checkbox" />',
+			'form_ID'    	=> __( 'CF7 Form ID', 'gh-cf7-insightly' ),
+			'module_name'   => __( 'Module Name', 'gh-cf7-insightly' ),
+			'mapping' 		=> __( 'Mapping', 'gh-cf7-insightly' ),
+			
 		];
 
 		return $columns;
@@ -161,8 +200,8 @@ class GH_CF7_Insightly_Mapping extends WP_List_Table {
 	 */
 	public function get_sortable_columns() {
 		$sortable_columns = array(
-			'response_code' => array( 'response_code', true ),
-			'city' => array( 'city', false )
+			'form_ID' => array( 'form_ID', true ),
+			'module_name' => array( 'module_name', false )
 		);
 
 		return $sortable_columns;
@@ -216,12 +255,9 @@ class GH_CF7_Insightly_Mapping extends WP_List_Table {
 				die( 'Go get a life script kiddies' );
 			}
 			else {
-				self::delete_mappings( absint( $_GET['mappings'] ) );
+				self::delete_mappings( absint( $_GET['mapping_id'] ) );
 
-		                // esc_url_raw() is used to prevent converting ampersand in url to "#038;"
-		                // add_query_arg() return the current url
-						echo esc_url_raw(add_query_arg());
-		                //wp_redirect( esc_url_raw(add_query_arg()) );
+		                wp_redirect( GH_CF7_INSIGHTLY_MAPPING_URL );
 				exit;
 			}
 
@@ -240,9 +276,7 @@ class GH_CF7_Insightly_Mapping extends WP_List_Table {
 
 			}
 
-			// esc_url_raw() is used to prevent converting ampersand in url to "#038;"
-		        // add_query_arg() return the current url
-		        wp_redirect( esc_url_raw(add_query_arg()) );
+	        wp_redirect( GH_CF7_INSIGHTLY_MAPPING_URL );
 			exit;
 		}
 	}
