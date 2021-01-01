@@ -32,6 +32,11 @@ if ( ! defined( 'WPINC' ) ) {
 
 global $wpdb;
 
+$gh_cf7_insightly_options  	= get_option( 'gh_cf7_insightly_options' );
+
+$gh_enable_widget			= ($gh_cf7_insightly_options['gh_enable_widget_on_cart'] == 1) ? true : false;
+$gh_cf7_insightly_api_key 	= $gh_cf7_insightly_options['gh_cf7_insightly_api_key'];
+
 /**
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org
@@ -41,6 +46,19 @@ define( 'GH_CF7_INSIGHTLY_VERSION', '1.0.0' );
 
 if ( ! defined( 'GH_CF7_INSIGHTLY_TABLE_MAPPING' ) ) {
     define( 'GH_CF7_INSIGHTLY_TABLE_MAPPING', $wpdb->prefix . 'gh_cf7_insightly_mapping' );
+}
+
+
+if ( ! defined( 'GH_CF7_INSIGHTLY_ENABLE' ) ) {
+    define( 'GH_CF7_INSIGHTLY_ENABLE', $gh_enable_widget );
+}
+
+if ( ! defined( 'GH_CF7_INSIGHTLY_API_KEY' ) ) {
+    define( 'GH_CF7_INSIGHTLY_API_KEY', $gh_cf7_insightly_api_key );
+}
+
+if ( ! defined( 'GH_CF7_INSIGHTLY_API_URL' ) ) {
+    define( 'GH_CF7_INSIGHTLY_API_URL', "https://api.insightly.com/v3.1/" );
 }
 
 if ( ! defined( 'GH_CF7_INSIGHTLY_MAPPING_URL' ) ) {

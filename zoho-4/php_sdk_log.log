@@ -1,0 +1,322 @@
+2020-12-31 11:28:49 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:28:51 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:28:51 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:28:52 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:28:52 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:28:57 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:28:58 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:29:01 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:31:59 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:33:59 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:34:02 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:36:47 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:36:48 com\zoho\api\logger\SDKLogger SEVERE Exception in authenticating current request :  com\zoho\crm\api\exception\SDKException Caused by : INVALID CLIENT ERROR - invalid_code
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php- 399- invalid_code
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(372): com\zoho\api\authenticator\OAuthToken->processResponse('HTTP/1.1 200 \r\n...')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(271): com\zoho\api\authenticator\OAuthToken->generateAccessToken(Object(com\zoho\crm\api\UserSignature), Object(com\zoho\api\authenticator\store\FileStore))
+#2 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/CommonAPIHandler.php(259): com\zoho\api\authenticator\OAuthToken->authenticate(Object(com\zoho\crm\api\util\APIHTTPConnector))
+#3 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/fields/FieldsOperations.php(41): com\zoho\crm\api\util\CommonAPIHandler->apiCall('com\\zoho\\crm\\ap...', 'application/jso...')
+#4 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(478): com\zoho\crm\api\fields\FieldsOperations->getFields(Object(com\zoho\crm\api\ParameterMap))
+#5 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(175): com\zoho\crm\api\util\Utility::getFieldDetails('Leads')
+#6 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(111): com\zoho\crm\api\util\Utility::getFields('Leads')
+#7 /opt/lampp/htdocs/zoho-4/zoho.php(141): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#8 /opt/lampp/htdocs/zoho-4/zoho.php(256): Initialize->initialize('1000.b8a98704ef...')
+#9 {main}
+2020-12-31 11:36:48 com\zoho\api\logger\SDKLogger SEVERE Exception :  com\zoho\crm\api\exception\SDKException Caused by : INVALID CLIENT ERROR - invalid_code
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php- 399- invalid_code
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(372): com\zoho\api\authenticator\OAuthToken->processResponse('HTTP/1.1 200 \r\n...')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(271): com\zoho\api\authenticator\OAuthToken->generateAccessToken(Object(com\zoho\crm\api\UserSignature), Object(com\zoho\api\authenticator\store\FileStore))
+#2 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/CommonAPIHandler.php(259): com\zoho\api\authenticator\OAuthToken->authenticate(Object(com\zoho\crm\api\util\APIHTTPConnector))
+#3 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/fields/FieldsOperations.php(41): com\zoho\crm\api\util\CommonAPIHandler->apiCall('com\\zoho\\crm\\ap...', 'application/jso...')
+#4 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(478): com\zoho\crm\api\fields\FieldsOperations->getFields(Object(com\zoho\crm\api\ParameterMap))
+#5 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(175): com\zoho\crm\api\util\Utility::getFieldDetails('Leads')
+#6 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(111): com\zoho\crm\api\util\Utility::getFields('Leads')
+#7 /opt/lampp/htdocs/zoho-4/zoho.php(141): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#8 /opt/lampp/htdocs/zoho-4/zoho.php(256): Initialize->initialize('1000.b8a98704ef...')
+#9 {main}
+2020-12-31 11:37:32 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:37:33 com\zoho\api\logger\SDKLogger SEVERE Exception in authenticating current request :  com\zoho\crm\api\exception\SDKException Caused by : INVALID CLIENT ERROR - invalid_code
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php- 399- invalid_code
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(372): com\zoho\api\authenticator\OAuthToken->processResponse('HTTP/1.1 200 \r\n...')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(271): com\zoho\api\authenticator\OAuthToken->generateAccessToken(Object(com\zoho\crm\api\UserSignature), Object(com\zoho\api\authenticator\store\FileStore))
+#2 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/CommonAPIHandler.php(259): com\zoho\api\authenticator\OAuthToken->authenticate(Object(com\zoho\crm\api\util\APIHTTPConnector))
+#3 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/fields/FieldsOperations.php(41): com\zoho\crm\api\util\CommonAPIHandler->apiCall('com\\zoho\\crm\\ap...', 'application/jso...')
+#4 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(478): com\zoho\crm\api\fields\FieldsOperations->getFields(Object(com\zoho\crm\api\ParameterMap))
+#5 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(112): com\zoho\crm\api\util\Utility::getFieldDetails('Leads')
+#6 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(111): com\zoho\crm\api\util\Utility::getFields('Leads')
+#7 /opt/lampp/htdocs/zoho-4/zoho.php(134): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#8 /opt/lampp/htdocs/zoho-4/zoho.php(253): Initialize->initialize('1000.b8a98704ef...')
+#9 {main}
+2020-12-31 11:37:33 com\zoho\api\logger\SDKLogger SEVERE Exception :  com\zoho\crm\api\exception\SDKException Caused by : INVALID CLIENT ERROR - invalid_code
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php- 399- invalid_code
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(372): com\zoho\api\authenticator\OAuthToken->processResponse('HTTP/1.1 200 \r\n...')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(271): com\zoho\api\authenticator\OAuthToken->generateAccessToken(Object(com\zoho\crm\api\UserSignature), Object(com\zoho\api\authenticator\store\FileStore))
+#2 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/CommonAPIHandler.php(259): com\zoho\api\authenticator\OAuthToken->authenticate(Object(com\zoho\crm\api\util\APIHTTPConnector))
+#3 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/fields/FieldsOperations.php(41): com\zoho\crm\api\util\CommonAPIHandler->apiCall('com\\zoho\\crm\\ap...', 'application/jso...')
+#4 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(478): com\zoho\crm\api\fields\FieldsOperations->getFields(Object(com\zoho\crm\api\ParameterMap))
+#5 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(112): com\zoho\crm\api\util\Utility::getFieldDetails('Leads')
+#6 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(111): com\zoho\crm\api\util\Utility::getFields('Leads')
+#7 /opt/lampp/htdocs/zoho-4/zoho.php(134): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#8 /opt/lampp/htdocs/zoho-4/zoho.php(253): Initialize->initialize('1000.b8a98704ef...')
+#9 {main}
+2020-12-31 11:37:43 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:37:44 com\zoho\api\logger\SDKLogger INFO GET - URL = https://developer.zohoapis.com/crm/v2/settings/fields?module=Leads , headers = {"Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"module":"Leads"}.
+2020-12-31 11:37:45 com\zoho\api\logger\SDKLogger SEVERE Exception :  com\zoho\crm\api\exception\SDKException Caused by : API_EXCEPTION - {"code":"OAUTH_SCOPE_MISMATCH","status":"error","message":"invalid oauth scope to access this URL"}
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php- 548- 
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(112): com\zoho\crm\api\util\Utility::getFieldDetails('Leads')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(111): com\zoho\crm\api\util\Utility::getFields('Leads')
+#2 /opt/lampp/htdocs/zoho-4/zoho.php(134): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#3 /opt/lampp/htdocs/zoho-4/zoho.php(253): Initialize->initialize('1000.b6405053a2...')
+#4 {main}
+2020-12-31 11:38:46 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:38:47 com\zoho\api\logger\SDKLogger INFO GET - URL = https://developer.zohoapis.com/crm/v2/settings/fields?module=Leads , headers = {"Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"module":"Leads"}.
+2020-12-31 11:38:48 com\zoho\api\logger\SDKLogger SEVERE Exception :  com\zoho\crm\api\exception\SDKException Caused by : API_EXCEPTION - {"code":"OAUTH_SCOPE_MISMATCH","status":"error","message":"invalid oauth scope to access this URL"}
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php- 548- 
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(112): com\zoho\crm\api\util\Utility::getFieldDetails('Leads')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(111): com\zoho\crm\api\util\Utility::getFields('Leads')
+#2 /opt/lampp/htdocs/zoho-4/zoho.php(134): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#3 /opt/lampp/htdocs/zoho-4/zoho.php(253): Initialize->initialize('1000.7328b85baf...')
+#4 {main}
+2020-12-31 11:38:50 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:38:50 com\zoho\api\logger\SDKLogger INFO GET - URL = https://developer.zohoapis.com/crm/v2/settings/fields?module=Leads , headers = {"Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"module":"Leads"}.
+2020-12-31 11:38:51 com\zoho\api\logger\SDKLogger SEVERE Exception :  com\zoho\crm\api\exception\SDKException Caused by : API_EXCEPTION - {"code":"OAUTH_SCOPE_MISMATCH","status":"error","message":"invalid oauth scope to access this URL"}
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php- 548- 
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(112): com\zoho\crm\api\util\Utility::getFieldDetails('Leads')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(111): com\zoho\crm\api\util\Utility::getFields('Leads')
+#2 /opt/lampp/htdocs/zoho-4/zoho.php(134): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#3 /opt/lampp/htdocs/zoho-4/zoho.php(253): Initialize->initialize('1000.7328b85baf...')
+#4 {main}
+2020-12-31 11:38:54 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:38:55 com\zoho\api\logger\SDKLogger INFO GET - URL = https://developer.zohoapis.com/crm/v2/settings/fields?module=Leads , headers = {"Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"module":"Leads"}.
+2020-12-31 11:38:56 com\zoho\api\logger\SDKLogger SEVERE Exception :  com\zoho\crm\api\exception\SDKException Caused by : API_EXCEPTION - {"code":"OAUTH_SCOPE_MISMATCH","status":"error","message":"invalid oauth scope to access this URL"}
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php- 548- 
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(112): com\zoho\crm\api\util\Utility::getFieldDetails('Leads')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(111): com\zoho\crm\api\util\Utility::getFields('Leads')
+#2 /opt/lampp/htdocs/zoho-4/zoho.php(134): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#3 /opt/lampp/htdocs/zoho-4/zoho.php(253): Initialize->initialize('1000.1e943030c3...')
+#4 {main}
+2020-12-31 11:41:37 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:41:37 com\zoho\api\logger\SDKLogger INFO GET - URL = https://developer.zohoapis.com/crm/v2/settings/fields?module=Leads , headers = {"Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"module":"Leads"}.
+2020-12-31 11:41:37 com\zoho\api\logger\SDKLogger SEVERE Exception :  com\zoho\crm\api\exception\SDKException Caused by : API_EXCEPTION - {"code":"OAUTH_SCOPE_MISMATCH","status":"error","message":"invalid oauth scope to access this URL"}
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php- 548- 
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(112): com\zoho\crm\api\util\Utility::getFieldDetails('Leads')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(111): com\zoho\crm\api\util\Utility::getFields('Leads')
+#2 /opt/lampp/htdocs/zoho-4/zoho.php(134): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#3 /opt/lampp/htdocs/zoho-4/zoho.php(253): Initialize->initialize('1000.1e943030c3...')
+#4 {main}
+2020-12-31 11:41:43 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://developer.zohoapis.com.
+2020-12-31 11:41:44 com\zoho\api\logger\SDKLogger INFO GET - URL = https://developer.zohoapis.com/crm/v2/settings/fields?module=Leads , headers = {"Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"module":"Leads"}.
+2020-12-31 11:41:45 com\zoho\api\logger\SDKLogger SEVERE Exception :  com\zoho\crm\api\exception\SDKException Caused by : API_EXCEPTION - {"code":"DOMAIN_TOKEN_MISMATCH","status":"error","message":"Environments specified in the API URL and bound with token do not match"}
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php- 548- 
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(112): com\zoho\crm\api\util\Utility::getFieldDetails('Leads')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(111): com\zoho\crm\api\util\Utility::getFields('Leads')
+#2 /opt/lampp/htdocs/zoho-4/zoho.php(134): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#3 /opt/lampp/htdocs/zoho-4/zoho.php(253): Initialize->initialize('1000.5db2394dcd...')
+#4 {main}
+2020-12-31 11:42:28 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 11:42:28 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/settings/fields?module=Leads , headers = {"Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"module":"Leads"}.
+2020-12-31 11:42:29 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 11:45:25 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 11:45:26 com\zoho\api\logger\SDKLogger SEVERE Exception in authenticating current request :  com\zoho\crm\api\exception\SDKException Caused by : INVALID CLIENT ERROR - invalid_code
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php- 399- invalid_code
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(372): com\zoho\api\authenticator\OAuthToken->processResponse('HTTP/1.1 200 \r\n...')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(271): com\zoho\api\authenticator\OAuthToken->generateAccessToken(Object(com\zoho\crm\api\UserSignature), Object(com\zoho\api\authenticator\store\FileStore))
+#2 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/CommonAPIHandler.php(259): com\zoho\api\authenticator\OAuthToken->authenticate(Object(com\zoho\crm\api\util\APIHTTPConnector))
+#3 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(113): com\zoho\crm\api\util\CommonAPIHandler->apiCall('com\\zoho\\crm\\ap...', 'application/jso...')
+#4 /opt/lampp/htdocs/zoho-4/zoho.php(134): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#5 /opt/lampp/htdocs/zoho-4/zoho.php(256): Initialize->initialize()
+#6 {main}
+2020-12-31 11:48:15 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 11:48:15 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 11:48:20 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 11:48:20 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 11:49:21 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 11:49:21 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 11:50:04 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 11:50:04 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 11:50:38 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 11:50:38 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 11:51:39 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 11:51:40 com\zoho\api\logger\SDKLogger SEVERE Exception in authenticating current request :  com\zoho\crm\api\exception\SDKException Caused by : INVALID CLIENT ERROR - invalid_code
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php- 399- invalid_code
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(372): com\zoho\api\authenticator\OAuthToken->processResponse('HTTP/1.1 200 \r\n...')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(271): com\zoho\api\authenticator\OAuthToken->generateAccessToken(Object(com\zoho\crm\api\UserSignature), Object(com\zoho\api\authenticator\store\FileStore))
+#2 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/CommonAPIHandler.php(259): com\zoho\api\authenticator\OAuthToken->authenticate(Object(com\zoho\crm\api\util\APIHTTPConnector))
+#3 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(113): com\zoho\crm\api\util\CommonAPIHandler->apiCall('com\\zoho\\crm\\ap...', 'application/jso...')
+#4 /opt/lampp/htdocs/zoho-4/zoho.php(134): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#5 /opt/lampp/htdocs/zoho-4/zoho.php(257): Initialize->initialize('1sdf')
+#6 {main}
+2020-12-31 11:51:53 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 11:51:53 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 11:51:59 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 11:52:00 com\zoho\api\logger\SDKLogger SEVERE Exception in authenticating current request :  com\zoho\crm\api\exception\SDKException Caused by : INVALID CLIENT ERROR - invalid_code
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php- 399- invalid_code
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(372): com\zoho\api\authenticator\OAuthToken->processResponse('HTTP/1.1 200 \r\n...')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(271): com\zoho\api\authenticator\OAuthToken->generateAccessToken(Object(com\zoho\crm\api\UserSignature), Object(com\zoho\api\authenticator\store\FileStore))
+#2 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/CommonAPIHandler.php(259): com\zoho\api\authenticator\OAuthToken->authenticate(Object(com\zoho\crm\api\util\APIHTTPConnector))
+#3 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(113): com\zoho\crm\api\util\CommonAPIHandler->apiCall('com\\zoho\\crm\\ap...', 'application/jso...')
+#4 /opt/lampp/htdocs/zoho-4/zoho.php(134): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#5 /opt/lampp/htdocs/zoho-4/zoho.php(257): Initialize->initialize('1000.5db2394dcd...')
+#6 {main}
+2020-12-31 11:52:09 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 11:52:09 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 11:52:37 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 11:52:37 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 12:00:15 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 12:00:15 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 12:08:35 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 12:08:35 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 13:36:47 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 13:36:47 com\zoho\api\logger\SDKLogger INFO Access Token has expired. Hence refreshing.
+2020-12-31 13:36:48 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 13:40:10 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 13:40:10 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 13:40:12 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 13:40:12 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 13:40:13 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 13:40:13 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 13:40:55 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 13:40:55 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 13:42:24 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 13:43:00 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 13:43:00 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 13:44:13 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 13:44:13 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 13:45:29 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 13:45:29 com\zoho\api\logger\SDKLogger SEVERE Exception in authenticating current request :  com\zoho\crm\api\exception\SDKException Caused by : INVALID CLIENT ERROR - invalid_code
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php- 399- invalid_code
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(372): com\zoho\api\authenticator\OAuthToken->processResponse('HTTP/1.1 200 \r\n...')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(271): com\zoho\api\authenticator\OAuthToken->generateAccessToken(Object(com\zoho\crm\api\UserSignature), Object(com\zoho\api\authenticator\store\FileStore))
+#2 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/CommonAPIHandler.php(259): com\zoho\api\authenticator\OAuthToken->authenticate(Object(com\zoho\crm\api\util\APIHTTPConnector))
+#3 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(113): com\zoho\crm\api\util\CommonAPIHandler->apiCall('com\\zoho\\crm\\ap...', 'application/jso...')
+#4 /opt/lampp/htdocs/zoho-4/zoho.php(139): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#5 /opt/lampp/htdocs/zoho-4/zoho.php(262): Initialize->initialize('1000.5db2394dcd...')
+#6 {main}
+2020-12-31 13:45:31 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 13:45:32 com\zoho\api\logger\SDKLogger SEVERE Exception in authenticating current request :  com\zoho\crm\api\exception\SDKException Caused by : INVALID CLIENT ERROR - invalid_code
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php- 399- invalid_code
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(372): com\zoho\api\authenticator\OAuthToken->processResponse('HTTP/1.1 200 \r\n...')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(271): com\zoho\api\authenticator\OAuthToken->generateAccessToken(Object(com\zoho\crm\api\UserSignature), Object(com\zoho\api\authenticator\store\FileStore))
+#2 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/CommonAPIHandler.php(259): com\zoho\api\authenticator\OAuthToken->authenticate(Object(com\zoho\crm\api\util\APIHTTPConnector))
+#3 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(113): com\zoho\crm\api\util\CommonAPIHandler->apiCall('com\\zoho\\crm\\ap...', 'application/jso...')
+#4 /opt/lampp/htdocs/zoho-4/zoho.php(139): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#5 /opt/lampp/htdocs/zoho-4/zoho.php(262): Initialize->initialize('1000.5db2394dcd...')
+#6 {main}
+2020-12-31 13:46:01 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 13:46:02 com\zoho\api\logger\SDKLogger SEVERE Exception in authenticating current request :  com\zoho\crm\api\exception\SDKException Caused by : INVALID CLIENT ERROR - invalid_code
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php- 399- invalid_code
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(372): com\zoho\api\authenticator\OAuthToken->processResponse('HTTP/1.1 200 \r\n...')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(271): com\zoho\api\authenticator\OAuthToken->generateAccessToken(Object(com\zoho\crm\api\UserSignature), Object(com\zoho\api\authenticator\store\FileStore))
+#2 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/CommonAPIHandler.php(259): com\zoho\api\authenticator\OAuthToken->authenticate(Object(com\zoho\crm\api\util\APIHTTPConnector))
+#3 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(113): com\zoho\crm\api\util\CommonAPIHandler->apiCall('com\\zoho\\crm\\ap...', 'application/jso...')
+#4 /opt/lampp/htdocs/zoho-4/zoho.php(139): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#5 /opt/lampp/htdocs/zoho-4/zoho.php(262): Initialize->initialize('1000.5db2394dcd...')
+#6 {main}
+2020-12-31 13:46:19 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 13:46:20 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 13:46:35 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 13:46:36 com\zoho\api\logger\SDKLogger SEVERE Exception in authenticating current request :  com\zoho\crm\api\exception\SDKException Caused by : INVALID CLIENT ERROR - invalid_code
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php- 399- invalid_code
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(372): com\zoho\api\authenticator\OAuthToken->processResponse('HTTP/1.1 200 \r\n...')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(271): com\zoho\api\authenticator\OAuthToken->generateAccessToken(Object(com\zoho\crm\api\UserSignature), Object(com\zoho\api\authenticator\store\FileStore))
+#2 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/CommonAPIHandler.php(259): com\zoho\api\authenticator\OAuthToken->authenticate(Object(com\zoho\crm\api\util\APIHTTPConnector))
+#3 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(113): com\zoho\crm\api\util\CommonAPIHandler->apiCall('com\\zoho\\crm\\ap...', 'application/jso...')
+#4 /opt/lampp/htdocs/zoho-4/zoho.php(139): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#5 /opt/lampp/htdocs/zoho-4/zoho.php(262): Initialize->initialize('1000.5db2394dcd...')
+#6 {main}
+2020-12-31 14:12:10 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 14:12:11 com\zoho\api\logger\SDKLogger SEVERE Exception in authenticating current request :  com\zoho\crm\api\exception\SDKException Caused by : INVALID CLIENT ERROR - invalid_code
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php- 399- invalid_code
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(372): com\zoho\api\authenticator\OAuthToken->processResponse('HTTP/1.1 200 \r\n...')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(271): com\zoho\api\authenticator\OAuthToken->generateAccessToken(Object(com\zoho\crm\api\UserSignature), Object(com\zoho\api\authenticator\store\FileStore))
+#2 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/CommonAPIHandler.php(259): com\zoho\api\authenticator\OAuthToken->authenticate(Object(com\zoho\crm\api\util\APIHTTPConnector))
+#3 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(113): com\zoho\crm\api\util\CommonAPIHandler->apiCall('com\\zoho\\crm\\ap...', 'application/jso...')
+#4 /opt/lampp/htdocs/zoho-4/zoho.php(139): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#5 /opt/lampp/htdocs/zoho-4/zoho.php(262): Initialize->initialize('1000.5db2394dcd...')
+#6 {main}
+2020-12-31 14:13:41 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 14:13:42 com\zoho\api\logger\SDKLogger SEVERE Exception in authenticating current request :  com\zoho\crm\api\exception\SDKException Caused by : INVALID CLIENT ERROR - invalid_code
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php- 399- invalid_code
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(372): com\zoho\api\authenticator\OAuthToken->processResponse('HTTP/1.1 200 \r\n...')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(271): com\zoho\api\authenticator\OAuthToken->generateAccessToken(Object(com\zoho\crm\api\UserSignature), Object(com\zoho\api\authenticator\store\FileStore))
+#2 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/CommonAPIHandler.php(259): com\zoho\api\authenticator\OAuthToken->authenticate(Object(com\zoho\crm\api\util\APIHTTPConnector))
+#3 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(113): com\zoho\crm\api\util\CommonAPIHandler->apiCall('com\\zoho\\crm\\ap...', 'application/jso...')
+#4 /opt/lampp/htdocs/zoho-4/zoho.php(141): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#5 /opt/lampp/htdocs/zoho-4/zoho.php(264): Initialize->initialize('1000.5db2394dcd...')
+#6 {main}
+2020-12-31 14:13:55 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 14:13:55 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 14:14:18 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.in.
+2020-12-31 14:14:18 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.in/crm/v2/settings/fields?module=Leads , headers = {"Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"module":"Leads"}.
+2020-12-31 14:14:19 com\zoho\api\logger\SDKLogger SEVERE Exception :  com\zoho\crm\api\exception\SDKException Caused by : API_EXCEPTION - {"code":"INVALID_TOKEN","status":"error","message":"invalid oauth token"}
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php- 548- 
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(175): com\zoho\crm\api\util\Utility::getFieldDetails('Leads')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(111): com\zoho\crm\api\util\Utility::getFields('Leads')
+#2 /opt/lampp/htdocs/zoho-4/zoho.php(141): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#3 /opt/lampp/htdocs/zoho-4/zoho.php(264): Initialize->initialize('1000.70e34cbaec...')
+#4 {main}
+2020-12-31 14:14:28 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.in.
+2020-12-31 14:14:28 com\zoho\api\logger\SDKLogger SEVERE Exception in authenticating current request :  com\zoho\crm\api\exception\SDKException Caused by : INVALID CLIENT ERROR - invalid_code
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php- 399- invalid_code
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(372): com\zoho\api\authenticator\OAuthToken->processResponse('HTTP/1.1 200 \r\n...')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(271): com\zoho\api\authenticator\OAuthToken->generateAccessToken(Object(com\zoho\crm\api\UserSignature), Object(com\zoho\api\authenticator\store\FileStore))
+#2 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/CommonAPIHandler.php(259): com\zoho\api\authenticator\OAuthToken->authenticate(Object(com\zoho\crm\api\util\APIHTTPConnector))
+#3 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/fields/FieldsOperations.php(41): com\zoho\crm\api\util\CommonAPIHandler->apiCall('com\\zoho\\crm\\ap...', 'application/jso...')
+#4 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(478): com\zoho\crm\api\fields\FieldsOperations->getFields(Object(com\zoho\crm\api\ParameterMap))
+#5 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(112): com\zoho\crm\api\util\Utility::getFieldDetails('Leads')
+#6 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(111): com\zoho\crm\api\util\Utility::getFields('Leads')
+#7 /opt/lampp/htdocs/zoho-4/zoho.php(141): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#8 /opt/lampp/htdocs/zoho-4/zoho.php(264): Initialize->initialize('1000.13a6161cd1...')
+#9 {main}
+2020-12-31 14:14:28 com\zoho\api\logger\SDKLogger SEVERE Exception :  com\zoho\crm\api\exception\SDKException Caused by : INVALID CLIENT ERROR - invalid_code
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php- 399- invalid_code
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(372): com\zoho\api\authenticator\OAuthToken->processResponse('HTTP/1.1 200 \r\n...')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(271): com\zoho\api\authenticator\OAuthToken->generateAccessToken(Object(com\zoho\crm\api\UserSignature), Object(com\zoho\api\authenticator\store\FileStore))
+#2 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/CommonAPIHandler.php(259): com\zoho\api\authenticator\OAuthToken->authenticate(Object(com\zoho\crm\api\util\APIHTTPConnector))
+#3 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/fields/FieldsOperations.php(41): com\zoho\crm\api\util\CommonAPIHandler->apiCall('com\\zoho\\crm\\ap...', 'application/jso...')
+#4 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(478): com\zoho\crm\api\fields\FieldsOperations->getFields(Object(com\zoho\crm\api\ParameterMap))
+#5 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/Utility.php(112): com\zoho\crm\api\util\Utility::getFieldDetails('Leads')
+#6 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(111): com\zoho\crm\api\util\Utility::getFields('Leads')
+#7 /opt/lampp/htdocs/zoho-4/zoho.php(141): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#8 /opt/lampp/htdocs/zoho-4/zoho.php(264): Initialize->initialize('1000.13a6161cd1...')
+#9 {main}
+2020-12-31 14:14:44 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 14:14:45 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2020-12-31 14:15:06 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2020-12-31 14:15:06 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2021-01-01 05:06:46 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2021-01-01 05:06:47 com\zoho\api\logger\SDKLogger SEVERE Exception in authenticating current request :  com\zoho\crm\api\exception\SDKException Caused by : INVALID CLIENT ERROR - invalid_code
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php- 399- invalid_code
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(372): com\zoho\api\authenticator\OAuthToken->processResponse('HTTP/1.1 200 \r\n...')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(271): com\zoho\api\authenticator\OAuthToken->generateAccessToken(Object(com\zoho\crm\api\UserSignature), Object(com\zoho\api\authenticator\store\FileStore))
+#2 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/CommonAPIHandler.php(259): com\zoho\api\authenticator\OAuthToken->authenticate(Object(com\zoho\crm\api\util\APIHTTPConnector))
+#3 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(113): com\zoho\crm\api\util\CommonAPIHandler->apiCall('com\\zoho\\crm\\ap...', 'application/jso...')
+#4 /opt/lampp/htdocs/zoho-4/zoho.php(139): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#5 /opt/lampp/htdocs/zoho-4/zoho.php(262): Initialize->initialize('1000.5db2394dcd...')
+#6 {main}
+2021-01-01 05:07:00 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2021-01-01 05:07:01 com\zoho\api\logger\SDKLogger SEVERE Exception in authenticating current request :  com\zoho\crm\api\exception\SDKException Caused by : INVALID CLIENT ERROR - invalid_code
+/opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php- 399- invalid_code
+#0 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(372): com\zoho\api\authenticator\OAuthToken->processResponse('HTTP/1.1 200 \r\n...')
+#1 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/api/authenticator/OAuthToken.php(271): com\zoho\api\authenticator\OAuthToken->generateAccessToken(Object(com\zoho\crm\api\UserSignature), Object(com\zoho\api\authenticator\store\FileStore))
+#2 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/util/CommonAPIHandler.php(259): com\zoho\api\authenticator\OAuthToken->authenticate(Object(com\zoho\crm\api\util\APIHTTPConnector))
+#3 /opt/lampp/htdocs/zoho-4/vendor/zohocrm/php-sdk/src/com/zoho/crm/api/record/RecordOperations.php(113): com\zoho\crm\api\util\CommonAPIHandler->apiCall('com\\zoho\\crm\\ap...', 'application/jso...')
+#4 /opt/lampp/htdocs/zoho-4/zoho.php(139): com\zoho\crm\api\record\RecordOperations->getRecords('Leads', Object(com\zoho\crm\api\ParameterMap), Object(com\zoho\crm\api\HeaderMap))
+#5 /opt/lampp/htdocs/zoho-4/zoho.php(262): Initialize->initialize('1000.5db2394dcd...')
+#6 {main}
+2021-01-01 05:07:41 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2021-01-01 05:07:41 com\zoho\api\logger\SDKLogger INFO Access Token has expired. Hence refreshing.
+2021-01-01 05:07:42 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2021-01-01 05:07:53 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2021-01-01 05:07:53 com\zoho\api\logger\SDKLogger INFO Access Token has expired. Hence refreshing.
+2021-01-01 05:07:54 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2021-01-01 05:08:10 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2021-01-01 05:08:10 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2021-01-01 05:08:25 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2021-01-01 05:08:25 com\zoho\api\logger\SDKLogger INFO Access Token has expired. Hence refreshing.
+2021-01-01 05:08:26 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2021-01-01 05:08:37 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2021-01-01 05:08:37 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.
+2021-01-01 07:44:13 com\zoho\api\logger\SDKLogger INFO Initialization successful for Email Id : iqbal.brightnessgroup@gmail.com in Environment : https://www.zohoapis.com.
+2021-01-01 07:44:13 com\zoho\api\logger\SDKLogger INFO Access Token has expired. Hence refreshing.
+2021-01-01 07:44:14 com\zoho\api\logger\SDKLogger INFO GET - URL = https://www.zohoapis.com/crm/v2/Leads?approved=both , headers = {"If-Modified-Since":"2020-06-02T07:33:06+02:00","Authorization":" ## can't disclose ## ","X-ZOHO-SDK":"Linux\/5.4.0-58-generic php\/7.2.28:3.0.0"} , PARAMS = {"approved":"both"}.

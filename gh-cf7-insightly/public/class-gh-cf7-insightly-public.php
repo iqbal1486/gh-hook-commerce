@@ -100,4 +100,109 @@ class Gh_Cf7_Insightly_Public {
 
 	}
 
+	public function form_submitted($form){
+		global $wpdb;
+
+		$tags 		=	$mapping = array();	
+		$form_id 	=	$form->id();
+		$form_title =	$form->title();
+		$submission =	WPCF7_Submission::get_instance();  
+
+		$lead 		= $submission->uploaded_files();
+
+		if( !is_array($lead) ){  
+
+				$lead 	=	array(); 
+
+		}
+	
+		if( method_exists( 'WPCF7_ShortcodeManager','get_instance' ) || method_exists( 'WPCF7_FormTagsManager','get_instance' ) ){
+
+			$form_text 	= get_post_meta($form_id ,'_form',true); 
+
+			if( method_exists( 'WPCF7_FormTagsManager','get_instance' ) ){
+				
+				$manager 	=	WPCF7_FormTagsManager::get_instance(); 
+
+				$contents 	=	$manager->scan($form_text); 
+
+				$tags 		=	$manager->get_scanned_tags();   
+
+			}else if( method_exists( 'WPCF7_ShortcodeManager','get_instance' ) ){
+				
+				$manager 	=	WPCF7_ShortcodeManager::get_instance();
+
+				$contents 	=	$manager->do_shortcode($form_text);
+
+				$tags 		=	$manager->get_scanned_tags();    
+
+			} 
+		}
+
+
+		if( is_array( $tags ) ){
+
+			foreach( $tags as $key	=>	$value ){
+
+				if( !empty( $value['name'] ) ){
+
+					$name 	=	$value['name'];
+
+					$val 	=	$submission->get_posted_data($name);
+
+					if( !isset( $lead[$name] ) ){  
+
+						$lead[$name] 	=	$val;  
+
+					}
+
+				}  
+
+			}
+		}
+			
+
+		$form_arr 	=	array(
+							'id' 	=> 	$form_id,
+							'name' 	=>	$form_title,
+							'fields'=>	$tags,
+							'lead'  =>	$lead,
+
+						);
+		
+		
+		$mapping_data = $wpdb->get_results( "SELECT * FROM ".GH_CF7_INSIGHTLY_TABLE_MAPPING." WHERE form_ID = $form_id");
+		
+		if( !empty( $mapping_data ) ){
+
+			foreach ( $mapping_data as $single_mapping_data ) {
+			    
+			    $module_name = $single_mapping_data->module_name;
+
+			    $mapping = array_filter( unserialize( $single_mapping_data->mapping ) );
+
+				foreach ($mapping as $key => $cf7_field) {
+					if( !empty( $lead[$cf7_field] ) ){
+						$mapping[$key] = $lead[$cf7_field];
+					}
+				}
+
+				if( !empty( $module_name ) ){
+					$headers = array(
+				        "Authorization" 	=> "Basic " . base64_encode( GH_CF7_INSIGHTLY_API_KEY . ':' . "" ),
+				        "Content-Type"  	=> "application/json",
+				        "Accept"        	=> "application/json",
+				        "Accept-Encoding"  	=> "gzip"
+				    );
+
+					$args = array(
+				        "headers" => $headers,
+				        "body" => json_encode( $mapping )
+				    );
+
+				    $response = wp_remote_post( GH_CF7_INSIGHTLY_API_URL.$module_name, $args );
+				}
+			}	
+		}
+	}
 }

@@ -1,1 +1,1 @@
-gh-cf7-insightly-admin-how-to-use.php
+How to use instruction

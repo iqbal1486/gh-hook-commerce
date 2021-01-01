@@ -181,6 +181,12 @@ class Gh_Cf7_Insightly {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
+		
+		if( GH_CF7_INSIGHTLY_ENABLE ){
+			//if enable then only exeute hooks	
+			$this->loader->add_filter( 'wpcf7_before_send_mail', $plugin_public, 'form_submitted', 99 );
+		}
+
 	}
 
 	/**

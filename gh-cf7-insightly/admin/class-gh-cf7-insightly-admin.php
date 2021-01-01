@@ -112,22 +112,7 @@ class Gh_Cf7_Insightly_Admin {
         $module_name 	= $post_data['module_name'];
         $contact_fields_mapping = serialize( $post_data['gh_cf7_insightly_contact_fields_mapping'] );
 
-        /*
-        $wpdb->replace(
-    		GH_CF7_INSIGHTLY_TABLE_MAPPING,
-    		array(
-    			'form_ID' => $form_ID,
-    			'module_name' => $module_name,
-    			'mapping' => $contact_fields_mapping,
-
-    		),
-    		array(
-    			'%d', '%s', '%s'
-    		)
-    	);
-    	*/
-		
-		$check_mapping = $wpdb->get_row( "SELECT id FROM ".GH_CF7_INSIGHTLY_TABLE_MAPPING." WHERE form_ID = $form_ID AND module_name = '".$module_name."'", ARRAY_A );
+     	$check_mapping = $wpdb->get_row( "SELECT id FROM ".GH_CF7_INSIGHTLY_TABLE_MAPPING." WHERE form_ID = $form_ID AND module_name = '".$module_name."'", ARRAY_A );
 
 		if ( null !== $check_mapping ) {
 		  	
@@ -158,11 +143,7 @@ class Gh_Cf7_Insightly_Admin {
 	    	);
 
 		}
-		// echo "<pre>";
-		// print_r($wpdb->last_query);
-		// echo "</pre>";
-		// exit();
-
+		
     	wp_redirect(GH_CF7_INSIGHTLY_MAPPING_URL);
         exit();
 	}

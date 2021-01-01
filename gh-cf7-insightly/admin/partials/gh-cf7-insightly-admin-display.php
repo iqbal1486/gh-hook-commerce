@@ -26,7 +26,6 @@ if(isset($_GET['page']) && $_GET['page'] = "gh-cf-insightly"){
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
 <nav class="nav-tab-wrapper">
     <a href="?page=gh-cf-insightly&amp;tab=basic-settings" class="nav-tab <?php if($active_tab == "basic-settings") echo "nav-tab-active"; ?>">Basic Settings</a>
-    <a href="?page=gh-cf-insightly&amp;tab=logs" class="nav-tab <?php if($active_tab == "logs") echo "nav-tab-active"; ?>">Logs</a>
     <a href="?page=gh-cf-insightly&amp;tab=mapping" class="nav-tab <?php if($active_tab == "mapping") echo "nav-tab-active"; ?>">Mapping</a>
     <a href="?page=gh-cf-insightly&amp;tab=how-to-use" class="nav-tab <?php if($active_tab == "how-to-use") echo "nav-tab-active"; ?>">How to Use</a>
 </nav>

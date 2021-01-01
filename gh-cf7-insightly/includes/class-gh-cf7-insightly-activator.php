@@ -40,9 +40,9 @@ class Gh_Cf7_Insightly_Activator {
 		   $sql = "CREATE TABLE $db_table_name (
 		            id int(11) NOT NULL auto_increment,
 		            form_ID int(11) NOT NULL,
+		            module_name varchar(255) NOT NULL,
 		            mapping text NOT NULL,
-		            UNIQUE KEY id (id),
-		            UNIQUE KEY form_ID (form_ID)
+		            UNIQUE KEY id (id)
 		    ) $charset_collate;";
 
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );

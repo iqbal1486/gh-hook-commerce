@@ -8,10 +8,7 @@
 		$insightly = new Insightly($module_name);
 		$gh_cf7_insightly_contact_fields = $insightly->{$classvariable};
 		
-		echo "<pre>";
-		print_r( $gh_cf7_insightly_contact_fields );
-		echo "</pre>";
-		
+	
 		if(isset( $_GET['action'] ) && $_GET['action'] == "edit" ) {
 
 			global $wpdb;
