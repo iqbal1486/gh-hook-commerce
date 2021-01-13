@@ -10,7 +10,7 @@
 
 <div class="block grey-light">
     <div class="wrap">
-        <h2>Loan Calculation</h2>
+        <h2 class="header">Loan Calculation</h2>
         <div class="calculator-loan">
             <div class="thirty form"></div>
             <div class="seventy">

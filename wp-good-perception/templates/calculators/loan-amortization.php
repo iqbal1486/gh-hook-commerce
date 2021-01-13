@@ -7,9 +7,9 @@
     wp_enqueue_script( 'wpgp-accrue-js');
     wp_enqueue_script( 'wpgp-loan-amortization-js');
 ?>
-<div class="block grey-lighter">
+<div class="block grey-light">
     <div class="wrap">
-        <h2>Amortization Calculation</h2>
+        <h2 class="header">Amortization Calculation</h2>
         <div class="calculator-amortization">
             <div class="thirty form"></div>
             <div class="seventy">

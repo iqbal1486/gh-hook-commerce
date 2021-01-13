@@ -6,7 +6,62 @@
     Author: Demo
     Version: 1.0.0
     */
+    /*
+        AMHARIC
+        ARABIC
+        BENGALI
+        CHINESE
+        GREEK
+        GUJARATI
+        HINDI
+        KANNADA
+        MALAYALAM
+        MARATHI
+        NEPALI
+        ORIYA
+        PERSIAN
+        PUNJABI
+        RUSSIAN
+        SANSKRIT
+        SERBIAN
+        SINHALESE
+        TAMIL
+        TELUGU
+        TIGRINYA
+        URDU
+    Gujarati Type Writter :  [wpgpwidget category="transliterate" module="transliterate" language="GUJARATI"]
 
+
+
+    Age Comparision : [wpgpwidget  module="age-comparision"]
+
+
+    Character counter : [wpgpwidget  module="character-counter"]
+
+
+    CSV to json : [wpgpwidget  module="csv-to-json"]
+
+
+    HD Capacity : [wpgpwidget  module="hd-capacity"]
+
+
+    Interest saving : [wpgpwidget  module="interest-saving"]
+
+    json formatter : [wpgpwidget  module="json-formatter"]
+
+    Loan Amortization : [wpgpwidget  module="loan-amortization"]
+
+
+    Loan calculator : [wpgpwidget  module="loan-calculation"]
+
+    Marks percentage : [wpgpwidget  module="marks-percentage"] Pending
+
+    Scientific Calculator : [wpgpwidget  module="scientificcalculator"]
+
+    xml to json : [wpgpwidget  module="xml-to-json"]
+
+    */
+    
     // Preventing to direct access
     defined( 'ABSPATH' ) OR die( 'Direct access not acceptable!' );
 
